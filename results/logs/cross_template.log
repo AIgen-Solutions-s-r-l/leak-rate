@@ -1,0 +1,27 @@
+== fold A: train on hr,clinical, evaluate on legal financial
+train docs 700 -> 1092 windows; dev docs 100 -> 158 windows; labels 33
+epoch 1: dev token accuracy 0.9709 (837s)
+epoch 2: dev token accuracy 0.9880 (1905s)
+saved to models/finetuned-xt-A
+finetuned-xt+regex mode=typed policy=direct+org+loc: 100 docs in 35.0s -> results/pseudo/xt_A_legal.jsonl
+finetuned-xt+regex mode=typed policy=direct+org+loc: 100 docs in 52.1s -> results/pseudo/xt_A_financial.jsonl
+== fold B: train on legal,financial, evaluate on hr clinical
+train docs 700 -> 1208 windows; dev docs 100 -> 168 windows; labels 33
+epoch 1: dev token accuracy 0.9731 (1656s)
+epoch 2: dev token accuracy 0.9828 (2926s)
+saved to models/finetuned-xt-B
+finetuned-xt+regex mode=typed policy=direct+org+loc: 100 docs in 38.0s -> results/pseudo/xt_B_hr.jsonl
+finetuned-xt+regex mode=typed policy=direct+org+loc: 100 docs in 41.0s -> results/pseudo/xt_B_clinical.jsonl
+system=finetuned-xt+regex mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.2 [0.0, 0.8]%
+  direct-mention leak rate:                               0.0 [0.0, 0.0]%
+  over-redaction (spurious replacements / 1k tokens):      31.0
+  category     kind    mentions  strict leak [95% CI]      partial [95% CI]        entity-level
+  ADDRESS      direct       780  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  CF           direct       437  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  DATE_BIRTH   direct       227  0.0 [0.0, 0.0]%          0.4 [0.0, 1.4]%        0.0 [0.0, 0.0]%
+  DOC_ID       direct       138  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  EMAIL        direct       420  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  IBAN         direct       246  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+EXIT=0

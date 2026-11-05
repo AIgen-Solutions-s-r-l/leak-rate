@@ -1,0 +1,26 @@
+{
+ "judge_model": "openai:qwen72b",
+ "prompt": "completeness-blind",
+ "records": "results/frontier/downstream__opus-5-5__medium.records.jsonl",
+ "n_docs": 400,
+ "judge_vs_raw": {
+  "typed": {
+   "win_rate_vs_raw": 0.3925,
+   "lo": 0.36875,
+   "hi": 0.415,
+   "n": 400
+  },
+  "opaque": {
+   "win_rate_vs_raw": 0.40375,
+   "lo": 0.380625,
+   "hi": 0.42625,
+   "n": 400
+  },
+  "oracle": {
+   "win_rate_vs_raw": 0.485,
+   "lo": 0.4625,
+   "hi": 0.505640625,
+   "n": 400
+  }
+ }
+}

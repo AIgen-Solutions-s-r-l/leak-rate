@@ -1,0 +1,6911 @@
+{
+ "leak": {
+  "system": "gliner",
+  "mode": "typed",
+  "policy": "direct+org+loc",
+  "n_docs": 400,
+  "per_category": {
+   "ADDRESS": {
+    "strict": {
+     "rate": 0.07435897435897436,
+     "lo": 0.05640586797066015,
+     "hi": 0.09256967352974632,
+     "n": 780,
+     "k": 58,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.05796056779111257,
+     "wilson_hi": 0.09492935340843021,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.07435897435897436,
+     "lo": 0.05640586797066015,
+     "hi": 0.09256967352974632,
+     "n": 780,
+     "k": 58,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.05796056779111257,
+     "wilson_hi": 0.09492935340843021,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.08169014084507042,
+     "lo": 0.06205734418165499,
+     "hi": 0.10152990264255911,
+     "n": 710,
+     "k": 58,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.06372335717604813,
+     "wilson_hi": 0.10415910102287296,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "AGE": {
+    "strict": {
+     "rate": 0.9804560260586319,
+     "lo": 0.9642828059562587,
+     "hi": 0.9937509704968944,
+     "n": 307,
+     "k": 301,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9580240606358361,
+     "wilson_hi": 0.9910127926259242,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.9804560260586319,
+     "lo": 0.9642828059562587,
+     "hi": 0.9937509704968944,
+     "n": 307,
+     "k": 301,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9580240606358361,
+     "wilson_hi": 0.9910127926259242,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.9781818181818182,
+     "lo": 0.9599889705882353,
+     "hi": 0.9929583642204102,
+     "n": 275,
+     "k": 269,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9532252200192457,
+     "wilson_hi": 0.9899630743439687,
+     "rule_of_three": null
+    },
+    "kind": "quasi"
+   },
+   "CF": {
+    "strict": {
+     "rate": 0.665903890160183,
+     "lo": 0.6128212535575956,
+     "hi": 0.718406845707733,
+     "n": 437,
+     "k": 291,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.6204045217190383,
+     "wilson_hi": 0.7085119108868244,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.665903890160183,
+     "lo": 0.6128212535575956,
+     "hi": 0.718406845707733,
+     "n": 437,
+     "k": 291,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.6204045217190383,
+     "wilson_hi": 0.7085119108868244,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.6864864864864865,
+     "lo": 0.6375954586739327,
+     "hi": 0.735453544419513,
+     "n": 370,
+     "k": 254,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.6375040614029092,
+     "wilson_hi": 0.7316363769341304,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "DATE": {
+    "strict": {
+     "rate": 0.9990448901623686,
+     "lo": 0.9970557924508092,
+     "hi": 1.0,
+     "n": 1047,
+     "k": 1046,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9946097808602987,
+     "wilson_hi": 0.9998313797620519,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.9990448901623686,
+     "lo": 0.9970557924508092,
+     "hi": 1.0,
+     "n": 1047,
+     "k": 1046,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9946097808602987,
+     "wilson_hi": 0.9998313797620519,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.9988009592326139,
+     "lo": 0.9963322936142672,
+     "hi": 1.0,
+     "n": 834,
+     "k": 833,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9932396578077382,
+     "wilson_hi": 0.9997883084985658,
+     "rule_of_three": null
+    },
+    "kind": "quasi"
+   },
+   "DATE_BIRTH": {
+    "strict": {
+     "rate": 0.19383259911894274,
+     "lo": 0.14351751207729468,
+     "hi": 0.246830958422799,
+     "n": 227,
+     "k": 44,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.14767988859579895,
+     "wilson_hi": 0.25017524248151324,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.19823788546255505,
+     "lo": 0.14717316017316018,
+     "hi": 0.25311334628919585,
+     "n": 227,
+     "k": 45,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.1515860548473875,
+     "wilson_hi": 0.25493303117845256,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.19383259911894274,
+     "lo": 0.14351751207729468,
+     "hi": 0.246830958422799,
+     "n": 227,
+     "k": 44,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.14767988859579895,
+     "wilson_hi": 0.25017524248151324,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "DOC_ID": {
+    "strict": {
+     "rate": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 138,
+     "k": 138,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9729172351187474,
+     "wilson_hi": 1.0,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 138,
+     "k": 138,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9729172351187474,
+     "wilson_hi": 1.0,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 120,
+     "k": 120,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9689808331071251,
+     "wilson_hi": 0.9999999999999999,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "EMAIL": {
+    "strict": {
+     "rate": 0.7071428571428572,
+     "lo": 0.6498680799426355,
+     "hi": 0.7582159624413145,
+     "n": 420,
+     "k": 297,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.6619008398617303,
+     "wilson_hi": 0.7486300233984673,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.7071428571428572,
+     "lo": 0.6498680799426355,
+     "hi": 0.7582159624413145,
+     "n": 420,
+     "k": 297,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.6619008398617303,
+     "wilson_hi": 0.7486300233984673,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.7295774647887324,
+     "lo": 0.676642303628038,
+     "hi": 0.7755202080832332,
+     "n": 355,
+     "k": 259,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.6810968919065796,
+     "wilson_hi": 0.7731427060154656,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "HEALTH": {
+    "strict": {
+     "rate": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 243,
+     "k": 243,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9844375458697022,
+     "wilson_hi": 1.0,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 243,
+     "k": 243,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9844375458697022,
+     "wilson_hi": 1.0,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 215,
+     "k": 215,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9824463842412068,
+     "wilson_hi": 1.0,
+     "rule_of_three": null
+    },
+    "kind": "quasi"
+   },
+   "IBAN": {
+    "strict": {
+     "rate": 0.012195121951219513,
+     "lo": 0.0,
+     "hi": 0.027238238415281214,
+     "n": 246,
+     "k": 3,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.004155949563025372,
+     "wilson_hi": 0.035234866218161076,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.012195121951219513,
+     "lo": 0.0,
+     "hi": 0.027238238415281214,
+     "n": 246,
+     "k": 3,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.004155949563025372,
+     "wilson_hi": 0.035234866218161076,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.01764705882352941,
+     "lo": 0.0,
+     "hi": 0.03910614525139665,
+     "n": 170,
+     "k": 3,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.006019442216459923,
+     "wilson_hi": 0.050592248370053355,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "LOC": {
+    "strict": {
+     "rate": 0.16573660714285715,
+     "lo": 0.143580800173788,
+     "hi": 0.1889337999465773,
+     "n": 1792,
+     "k": 297,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.14923888788402526,
+     "wilson_hi": 0.18366436252523763,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.16573660714285715,
+     "lo": 0.143580800173788,
+     "hi": 0.1889337999465773,
+     "n": 1792,
+     "k": 297,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.14923888788402526,
+     "wilson_hi": 0.18366436252523763,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.20877025738798857,
+     "lo": 0.18407888559304503,
+     "hi": 0.23518445619165446,
+     "n": 1049,
+     "k": 219,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.18525982888950088,
+     "wilson_hi": 0.23440588160671927,
+     "rule_of_three": null
+    },
+    "kind": "quasi"
+   },
+   "ORG": {
+    "strict": {
+     "rate": 0.24887556221889057,
+     "lo": 0.198862371864041,
+     "hi": 0.2986822840409956,
+     "n": 667,
+     "k": 166,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.21756411166428336,
+     "wilson_hi": 0.2830630550605485,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.24887556221889057,
+     "lo": 0.198862371864041,
+     "hi": 0.2986822840409956,
+     "n": 667,
+     "k": 166,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.21756411166428336,
+     "wilson_hi": 0.2830630550605485,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.2182741116751269,
+     "lo": 0.17259801606046293,
+     "hi": 0.26448713540972335,
+     "n": 394,
+     "k": 86,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.180313112707183,
+     "wilson_hi": 0.26167566185580654,
+     "rule_of_three": null
+    },
+    "kind": "quasi"
+   },
+   "PER": {
+    "strict": {
+     "rate": 0.479498861047836,
+     "lo": 0.4579051638549212,
+     "hi": 0.5008509437997708,
+     "n": 1756,
+     "k": 842,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.4562027572771015,
+     "wilson_hi": 0.5028844663835065,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.7636674259681093,
+     "lo": 0.7338224258148208,
+     "hi": 0.7899654634925627,
+     "n": 1756,
+     "k": 1341,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.7432351500744955,
+     "wilson_hi": 0.7829486122904644,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.6358866736621196,
+     "lo": 0.6055100655122017,
+     "hi": 0.664560219276714,
+     "n": 953,
+     "k": 606,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.6048477314785604,
+     "wilson_hi": 0.6658345195840275,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "PHONE": {
+    "strict": {
+     "rate": 0.4421965317919075,
+     "lo": 0.3830328135152697,
+     "hi": 0.5014174629787164,
+     "n": 346,
+     "k": 153,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.39078456770141834,
+     "wilson_hi": 0.49487792602385416,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.4421965317919075,
+     "lo": 0.3830328135152697,
+     "hi": 0.5014174629787164,
+     "n": 346,
+     "k": 153,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.39078456770141834,
+     "wilson_hi": 0.49487792602385416,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.46788990825688076,
+     "lo": 0.40866443068455455,
+     "hi": 0.526154069767442,
+     "n": 327,
+     "k": 153,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.4144950813860138,
+     "wilson_hi": 0.5220304070729925,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "PIVA": {
+    "strict": {
+     "rate": 0.12,
+     "lo": 0.05952086280056577,
+     "hi": 0.1875256147540982,
+     "n": 100,
+     "k": 12,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.06999406407369686,
+     "wilson_hi": 0.19812099499074032,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.12,
+     "lo": 0.05952086280056577,
+     "hi": 0.1875256147540982,
+     "n": 100,
+     "k": 12,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.06999406407369686,
+     "wilson_hi": 0.19812099499074032,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.12,
+     "lo": 0.05952086280056577,
+     "hi": 0.1875256147540982,
+     "n": 100,
+     "k": 12,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.06999406407369686,
+     "wilson_hi": 0.19812099499074032,
+     "rule_of_three": null
+    },
+    "kind": "direct"
+   },
+   "PLATE": {
+    "strict": {
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 30,
+     "k": 0,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.0,
+     "wilson_hi": 0.11351339476145204,
+     "rule_of_three": 0.1
+    },
+    "partial": {
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 30,
+     "k": 0,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.0,
+     "wilson_hi": 0.11351339476145204,
+     "rule_of_three": 0.1
+    },
+    "entity": {
+     "rate": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 30,
+     "k": 0,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.0,
+     "wilson_hi": 0.11351339476145204,
+     "rule_of_three": 0.1
+    },
+    "kind": "direct"
+   },
+   "PROFESSION": {
+    "strict": {
+     "rate": 0.9548872180451128,
+     "lo": 0.9287531806615776,
+     "hi": 0.9757354310726176,
+     "n": 399,
+     "k": 381,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9298226524220896,
+     "wilson_hi": 0.9712762588172426,
+     "rule_of_three": null
+    },
+    "partial": {
+     "rate": 0.9548872180451128,
+     "lo": 0.9287531806615776,
+     "hi": 0.9757354310726176,
+     "n": 399,
+     "k": 381,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.9298226524220896,
+     "wilson_hi": 0.9712762588172426,
+     "rule_of_three": null
+    },
+    "entity": {
+     "rate": 0.9400749063670412,
+     "lo": 0.9108509120774617,
+     "hi": 0.9666697416974169,
+     "n": 267,
+     "k": 251,
+     "clusters": 400,
+     "method": "cluster_bootstrap",
+     "wilson_lo": 0.904885431794295,
+     "wilson_hi": 0.9627808441542313,
+     "rule_of_three": null
+    },
+    "kind": "quasi"
+   }
+  },
+  "doc_leak_rate": {
+   "rate": 0.965,
+   "lo": 0.945,
+   "hi": 0.9825,
+   "n": 400,
+   "k": 386,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9421148602454466,
+   "wilson_hi": 0.9790387058854262,
+   "rule_of_three": null
+  },
+  "doc_leak_rate_partial": {
+   "rate": 0.9675,
+   "lo": 0.95,
+   "hi": 0.9825,
+   "n": 400,
+   "k": 387,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9451958469585785,
+   "wilson_hi": 0.9809101576998797,
+   "rule_of_three": null
+  },
+  "direct_mention_leak": {
+   "rate": 0.41026785714285713,
+   "lo": 0.39540003362295406,
+   "hi": 0.42485434039840303,
+   "n": 4480,
+   "k": 1838,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.3959471269490041,
+   "wilson_hi": 0.4247423404701683,
+   "rule_of_three": null
+  },
+  "over_redaction_per_1k_tokens": 3.895560960778352,
+  "examples": [
+   {
+    "category": "CF",
+    "surface": "LMBSMN82L16L117F",
+    "doc_id": "legal_test_00000"
+   },
+   {
+    "category": "PER",
+    "surface": "Antonella Negri",
+    "doc_id": "legal_test_00000"
+   },
+   {
+    "category": "CF",
+    "surface": "NGRNNL88P44L483A",
+    "doc_id": "legal_test_00000"
+   },
+   {
+    "category": "CF",
+    "surface": "SRTLNZ72E15L483U",
+    "doc_id": "legal_test_00001"
+   },
+   {
+    "category": "CF",
+    "surface": "RZZCLD64M22D548S",
+    "doc_id": "legal_test_00001"
+   },
+   {
+    "category": "EMAIL",
+    "surface": "rizzi.claudio@outlook.it",
+    "doc_id": "legal_test_00001"
+   },
+   {
+    "category": "PHONE",
+    "surface": "+393286140278",
+    "doc_id": "legal_test_00002"
+   },
+   {
+    "category": "EMAIL",
+    "surface": "annamassari59@tim.it",
+    "doc_id": "legal_test_00002"
+   },
+   {
+    "category": "PER",
+    "surface": "Massari",
+    "doc_id": "legal_test_00002"
+   },
+   {
+    "category": "PHONE",
+    "surface": "379 681 2957",
+    "doc_id": "legal_test_00003"
+   },
+   {
+    "category": "PER",
+    "surface": "ROCCA Rossella",
+    "doc_id": "legal_test_00003"
+   },
+   {
+    "category": "DOC_ID",
+    "surface": "CY33913YS",
+    "doc_id": "legal_test_00003"
+   }
+  ],
+  "by_domain": {
+   "clinical": {
+    "rate": 0.9,
+    "lo": 0.84,
+    "hi": 0.96,
+    "n": 100,
+    "k": 90,
+    "clusters": 100,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.8256343377898756,
+    "wilson_hi": 0.9447708631949274,
+    "rule_of_three": null
+   },
+   "financial": {
+    "rate": 0.96,
+    "lo": 0.92,
+    "hi": 0.99,
+    "n": 100,
+    "k": 96,
+    "clusters": 100,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.9016292850152788,
+    "wilson_hi": 0.9843366961172447,
+    "rule_of_three": null
+   },
+   "hr": {
+    "rate": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n": 100,
+    "k": 100,
+    "clusters": 100,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.9630065012310038,
+    "wilson_hi": 1.0,
+    "rule_of_three": null
+   },
+   "legal": {
+    "rate": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n": 100,
+    "k": 100,
+    "clusters": 100,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.9630065012310038,
+    "wilson_hi": 1.0,
+    "rule_of_three": null
+   }
+  },
+  "per_form": {
+   "first": {
+    "rate": 0.5283018867924528,
+    "lo": 0.3952865448504983,
+    "hi": 0.6585365853658537,
+    "n": 53,
+    "k": 28,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.39660081180415385,
+    "wilson_hi": 0.6561775661446775,
+    "rule_of_three": null
+   },
+   "full": {
+    "rate": 0.4054945054945055,
+    "lo": 0.3690845355694979,
+    "hi": 0.4434288299935359,
+    "n": 910,
+    "k": 369,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.3740558890362757,
+    "wilson_hi": 0.4377276557696707,
+    "rule_of_three": null
+   },
+   "initial": {
+    "rate": 0.9875776397515528,
+    "lo": 0.967741935483871,
+    "hi": 1.0,
+    "n": 161,
+    "k": 159,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.9558435952491002,
+    "wilson_hi": 0.9965867039334451,
+    "rule_of_three": null
+   },
+   "inverted": {
+    "rate": 0.25766871165644173,
+    "lo": 0.19160162820426563,
+    "hi": 0.3291177832664402,
+    "n": 163,
+    "k": 42,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.1966511780478069,
+    "wilson_hi": 0.3298454102120288,
+    "rule_of_three": null
+   },
+   "surname": {
+    "rate": 0.8271186440677966,
+    "lo": 0.7785149481391092,
+    "hi": 0.8730201863354037,
+    "n": 295,
+    "k": 244,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.7798348055602314,
+    "wilson_hi": 0.8659925864036871,
+    "rule_of_three": null
+   },
+   "upper": {
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 174,
+    "k": 0,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.0,
+    "wilson_hi": 0.021600468785290733,
+    "rule_of_three": 0.017241379310344827
+   }
+  }
+ },
+ "kanon": {
+  "n_docs": 400,
+  "corpus_k_median": 1.0,
+  "corpus_k_p10": 1.0,
+  "corpus_k_unique_share": 0.785,
+  "pop_k_median": 15087.752274,
+  "pop_k_p10": 2.2823925143877632,
+  "pop_k_lt5_share": 0.1175,
+  "pop_k_lt11_share": 0.13,
+  "pop_k_lt100_share": 0.2125,
+  "attr_survival": {
+   "age": 0.745,
+   "city": 0.0875,
+   "diagnosis": 0.25,
+   "employer": 0.0975,
+   "gender": 1.0,
+   "marital_status": 0.215,
+   "nationality": 0.26,
+   "profession": 0.6275
+  },
+  "by_domain": {
+   "clinical": {
+    "pop_k_median": 769.8435494851614,
+    "pop_k_lt11_share": 0.17,
+    "corpus_k_unique_share": 1.0,
+    "n": 100
+   },
+   "financial": {
+    "pop_k_median": 11572.82596884,
+    "pop_k_lt11_share": 0.22,
+    "corpus_k_unique_share": 0.83,
+    "n": 100
+   },
+   "hr": {
+    "pop_k_median": 17156.6715978,
+    "pop_k_lt11_share": 0.13,
+    "corpus_k_unique_share": 0.75,
+    "n": 100
+   },
+   "legal": {
+    "pop_k_median": 364845.07116,
+    "pop_k_lt11_share": 0.0,
+    "corpus_k_unique_share": 0.56,
+    "n": 100
+   }
+  },
+  "l_diversity_clinical": {
+   "l_median": 1.0,
+   "l1_share": 0.83,
+   "n": 100
+  }
+ },
+ "per_document": [
+  {
+   "doc_id": "legal_test_00000",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00001",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00002",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00003",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00004",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00005",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00006",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00007",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00008",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00009",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00010",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00011",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00012",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00013",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00014",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00015",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00016",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00017",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00018",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00019",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00020",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00021",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00022",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00023",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00024",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00025",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00026",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00027",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00028",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00029",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00030",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00031",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00032",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00033",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00034",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00035",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00036",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00037",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00038",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00039",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00040",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00041",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00042",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00043",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00044",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00045",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00046",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00047",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00048",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00049",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00050",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00051",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00052",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00053",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00054",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00055",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00056",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00057",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00058",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00059",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00060",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00061",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00062",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00063",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00064",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00065",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00066",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00067",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00068",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00069",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00070",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00071",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00072",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00073",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00074",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00075",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00076",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00077",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00078",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00079",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00080",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00081",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00082",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00083",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00084",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00085",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00086",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00087",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00088",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00089",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00090",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00091",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00092",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00093",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00094",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00095",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00096",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00097",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00098",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "legal_test_00099",
+   "domain": "legal",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00000",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00001",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00002",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00003",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00004",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00005",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00006",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00007",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00008",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00009",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00010",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00011",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00012",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00013",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00014",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00015",
+   "domain": "financial",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00016",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00017",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00018",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00019",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00020",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00021",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00022",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00023",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00024",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00025",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00026",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00027",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00028",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00029",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00030",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00031",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00032",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00033",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00034",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00035",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00036",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00037",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00038",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00039",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00040",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00041",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00042",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00043",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00044",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00045",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00046",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00047",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00048",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00049",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00050",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00051",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00052",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00053",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00054",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00055",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00056",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00057",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00058",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00059",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00060",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00061",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00062",
+   "domain": "financial",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00063",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00064",
+   "domain": "financial",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00065",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00066",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00067",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00068",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00069",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00070",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00071",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00072",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00073",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00074",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00075",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00076",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00077",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00078",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00079",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00080",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00081",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00082",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00083",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00084",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00085",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00086",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00087",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00088",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00089",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00090",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00091",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00092",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00093",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00094",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00095",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00096",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00097",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00098",
+   "domain": "financial",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "financial_test_00099",
+   "domain": "financial",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00000",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00001",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00002",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00003",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00004",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00005",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00006",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00007",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00008",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00009",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00010",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00011",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00012",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00013",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00014",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00015",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00016",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00017",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00018",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00019",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00020",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00021",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00022",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00023",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00024",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00025",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00026",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00027",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00028",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00029",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00030",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00031",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00032",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00033",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00034",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00035",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00036",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00037",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00038",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00039",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00040",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00041",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00042",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00043",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00044",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00045",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00046",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00047",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00048",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00049",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00050",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00051",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00052",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00053",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00054",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00055",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00056",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00057",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00058",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00059",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00060",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00061",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00062",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00063",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00064",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00065",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00066",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00067",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00068",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00069",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00070",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00071",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00072",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00073",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00074",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00075",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00076",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00077",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00078",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00079",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00080",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00081",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00082",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00083",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00084",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00085",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00086",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00087",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00088",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00089",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00090",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00091",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00092",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00093",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00094",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00095",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00096",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00097",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00098",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "hr_test_00099",
+   "domain": "hr",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   }
+  },
+  {
+   "doc_id": "clinical_test_00000",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00001",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00002",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00003",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00004",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00005",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00006",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00007",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00008",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00009",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00010",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00011",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00012",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00013",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00014",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00015",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00016",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00017",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00018",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00019",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00020",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00021",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00022",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00023",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00024",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00025",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00026",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00027",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00028",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00029",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00030",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00031",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00032",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00033",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00034",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00035",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00036",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00037",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00038",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00039",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00040",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00041",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00042",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00043",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00044",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00045",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00046",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00047",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00048",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00049",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00050",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00051",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00052",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00053",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00054",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00055",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00056",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00057",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00058",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00059",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00060",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00061",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00062",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00063",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00064",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00065",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00066",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00067",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00068",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00069",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00070",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00071",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00072",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00073",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00074",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00075",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00076",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00077",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00078",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00079",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00080",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00081",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00082",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00083",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00084",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00085",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00086",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00087",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00088",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00089",
+   "domain": "clinical",
+   "any_direct_strict": false,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00090",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00091",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00092",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00093",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00094",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00095",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00096",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00097",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00098",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  },
+  {
+   "doc_id": "clinical_test_00099",
+   "domain": "clinical",
+   "any_direct_strict": true,
+   "surviving_quasi": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   }
+  }
+ ]
+}

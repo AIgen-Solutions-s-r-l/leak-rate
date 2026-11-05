@@ -1,0 +1,527 @@
+
+=================== [16:53:43] B1  claude-sonnet-5-5 consumer (raw/typed/opaque), default-ish effort
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+{
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "run_tag": "",
+ "n_docs": 400,
+ "tasks": [
+  "summarize",
+  "extract",
+  "classify",
+  "qa"
+ ],
+ "conditions": {
+  "typed": {
+   "path": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  },
+  "opaque": {
+   "path": "results/pseudo/presidio-regex__opaque__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  }
+ },
+ "deltas_vs_raw": {
+  "classify:typed": {
+   "diff": -0.0275,
+   "lo": -0.0575,
+   "hi": 0.0025,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.87,
+   "mean_cond": 0.8425
+  },
+  "classify:opaque": {
+   "diff": -0.0375,
+   "lo": -0.07,
+   "hi": -0.005,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.87,
+   "mean_cond": 0.8325
+  },
+  "qa:typed": {
+   "diff": -0.00125,
+   "lo": -0.00375,
+   "hi": 0.0,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.80375,
+   "mean_cond": 0.8025
+  },
+  "qa:opaque": {
+   "diff": -0.0025,
+   "lo": -0.00625,
+   "hi": 0.0,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.80375,
+   "mean_cond": 0.80125
+  },
+  "extract:typed": {
+   "diff": -0.02145833333333334,
+   "lo": -0.037208333333333336,
+   "hi": -0.006958333333333333,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.48945833333333333,
+   "mean_cond": 0.46799999999999997
+  },
+  "extract:opaque": {
+   "diff": -0.013333333333333334,
+   "lo": -0.029541666666666667,
+   "hi": 0.0010031249999999817,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.48945833333333333,
+   "mean_cond": 0.47612499999999996
+  }
+ },
+ "agreement": {
+  "typed": {
+   "contexts": 1195,
+   "errors": 307,
+   "rate": {
+    "rate": 0.2569037656903766,
+    "lo": 0.23261492132407396,
+    "hi": 0.2816927751044923,
+    "n": 1195,
+    "k": 307,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.23293756110578848,
+    "wilson_hi": 0.282427881342154,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 209
+  },
+  "opaque": {
+   "contexts": 1182,
+   "errors": 315,
+   "rate": {
+    "rate": 0.26649746192893403,
+    "lo": 0.242863929279577,
+    "hi": 0.29089566401777706,
+    "n": 1182,
+    "k": 315,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.2420783705299925,
+    "wilson_hi": 0.29242938692289,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 1721
+  }
+ },
+ "judge_model": "claude-sonnet-5-5",
+ "judge_vs_raw": {
+  "typed": {
+   "win_rate_vs_raw": 0.6190476190476191,
+   "lo": 0.5714285714285714,
+   "hi": 0.6674107142857143,
+   "n": 336
+  },
+  "opaque": {
+   "win_rate_vs_raw": 0.597953216374269,
+   "lo": 0.5511695906432749,
+   "hi": 0.6440058479532164,
+   "n": 342
+  }
+ },
+ "refusals": 0,
+ "max_tokens_hits": 0,
+ "tokens": {
+  "input": 5757661,
+  "output": 818877
+ }
+}
+TOTAL                    17017                            76.34
+
+=================== [17:25:56] B2  claude-sonnet-5-5 as its own anonymizer (llm_self, low effort)
+llm_self-sonnet-5-5-low mode=typed policy=direct+org+loc: 400 docs in 165.6s -> results/pseudo/llm_self-sonnet-5-5-low__typed__direct-org-loc__test.jsonl
+system=llm_self-sonnet-5-5-low mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.2 [0.0, 0.8]%
+  direct-mention leak rate:                               0.0 [0.0, 0.0]%
+  over-redaction (spurious replacements / 1k tokens):      4.2
+  category     kind    mentions  strict leak [95% CI]      partial [95% CI]        entity-level
+  ADDRESS      direct       780  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  CF           direct       437  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  DATE_BIRTH   direct       227  0.0 [0.0, 0.0]%          0.4 [0.0, 1.4]%        0.0 [0.0, 0.0]%
+  DOC_ID       direct       138  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  EMAIL        direct       420  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  IBAN         direct       246  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PER          direct      1756  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PHONE        direct       346  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PIVA         direct       100  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PLATE        direct        30  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  AGE          quasi        307  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  DATE         quasi       1047  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  HEALTH       quasi        243  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  LOC          quasi       1792  0.2 [0.0, 0.6]%          0.2 [0.0, 0.6]%        0.2 [0.0, 0.5]%
+  ORG          quasi        667  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PROFESSION   quasi        399  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  by domain (doc_leak_rate): clinical=0.0 [0.0, 0.0]%, financial=0.0 [0.0, 0.0]%, hr=0.0 [0.0, 0.0]%, legal=0.0 [0.0, 0.0]%
+  PER strict leak by surface form: first=0.0 [0.0, 0.0]% (n=53), full=0.0 [0.0, 0.0]% (n=910), initial=0.0 [0.0, 0.0]% (n=161), inverted=0.0 [0.0, 0.0]% (n=163), surname=0.0 [0.0, 0.0]% (n=295), upper=0.0 [0.0, 0.0]% (n=174)
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=35,059 p10=367 share k̂<11=1.5% k̂<100=5.2%
+  quasi-identifier survival: age=69%, city=0%, diagnosis=25%, employer=0%, gender=100%, marital_status=22%, nationality=0%, profession=67%
+  -> results/eval/llm_self-sonnet-5-5-low__typed__direct-org-loc__test.eval.json
+TOTAL                    18426                            85.10
+
+=================== [17:29:16] B1  claude-haiku-5-5 consumer (raw/typed/opaque), default-ish effort
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+{
+ "model": "claude-haiku-5-5",
+ "effort": "medium",
+ "run_tag": "",
+ "n_docs": 400,
+ "tasks": [
+  "summarize",
+  "extract",
+  "classify",
+  "qa"
+ ],
+ "conditions": {
+  "typed": {
+   "path": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  },
+  "opaque": {
+   "path": "results/pseudo/presidio-regex__opaque__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  }
+ },
+ "deltas_vs_raw": {
+  "qa:typed": {
+   "diff": -0.005,
+   "lo": -0.01,
+   "hi": -0.00125,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.80375,
+   "mean_cond": 0.79875
+  },
+  "qa:opaque": {
+   "diff": -0.00875,
+   "lo": -0.015,
+   "hi": -0.0025,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.80375,
+   "mean_cond": 0.795
+  },
+  "classify:typed": {
+   "diff": -0.02,
+   "lo": -0.05,
+   "hi": 0.0075,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.8225,
+   "mean_cond": 0.8025
+  },
+  "classify:opaque": {
+   "diff": -0.0125,
+   "lo": -0.0375,
+   "hi": 0.0125,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.8225,
+   "mean_cond": 0.81
+  },
+  "extract:typed": {
+   "diff": -0.026666666666666665,
+   "lo": -0.03833333333333333,
+   "hi": -0.01583333333333333,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.7445833333333333,
+   "mean_cond": 0.7179166666666665
+  },
+  "extract:opaque": {
+   "diff": -0.03395833333333333,
+   "lo": -0.0475,
+   "hi": -0.02166666666666667,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.7445833333333333,
+   "mean_cond": 0.710625
+  }
+ },
+ "agreement": {
+  "typed": {
+   "contexts": 337,
+   "errors": 19,
+   "rate": {
+    "rate": 0.05637982195845697,
+    "lo": 0.031643073912869864,
+    "hi": 0.0851063829787234,
+    "n": 337,
+    "k": 19,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.03638760090317149,
+    "wilson_hi": 0.08637169903242707,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 204
+  },
+  "opaque": {
+   "contexts": 368,
+   "errors": 16,
+   "rate": {
+    "rate": 0.043478260869565216,
+    "lo": 0.02247191011235955,
+    "hi": 0.06516735731373886,
+    "n": 368,
+    "k": 16,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.026936980438061538,
+    "wilson_hi": 0.06945210696797127,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 1353
+  }
+ },
+ "judge_model": "claude-sonnet-5-5",
+ "judge_vs_raw": {
+  "typed": {
+   "win_rate_vs_raw": 0.5438829787234043,
+   "lo": 0.4979886968085106,
+   "hi": 0.589095744680851,
+   "n": 376
+  },
+  "opaque": {
+   "win_rate_vs_raw": 0.5597112860892388,
+   "lo": 0.5170603674540682,
+   "hi": 0.60498687664042,
+   "n": 381
+  }
+ },
+ "refusals": 0,
+ "max_tokens_hits": 0,
+ "tokens": {
+  "input": 5694391,
+  "output": 2081653
+ }
+}
+TOTAL                    35894                           147.51
+
+=================== [18:02:32] B2  claude-haiku-5-5 as its own anonymizer (llm_self, low effort)
+llm_self-haiku-5-5-low mode=typed policy=direct+org+loc: 400 docs in 143.9s -> results/pseudo/llm_self-haiku-5-5-low__typed__direct-org-loc__test.jsonl
+system=llm_self-haiku-5-5-low mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.2 [0.0, 0.8]%
+  doc_leak_rate incl. partial fragments:                   0.5 [0.0, 1.2]%
+  direct-mention leak rate:                               0.0 [0.0, 0.1]%
+  over-redaction (spurious replacements / 1k tokens):      4.7
+  category     kind    mentions  strict leak [95% CI]      partial [95% CI]        entity-level
+  ADDRESS      direct       780  0.1 [0.0, 0.4]%          0.1 [0.0, 0.4]%        0.1 [0.0, 0.4]%
+  CF           direct       437  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  DATE_BIRTH   direct       227  0.0 [0.0, 0.0]%          0.4 [0.0, 1.4]%        0.0 [0.0, 0.0]%
+  DOC_ID       direct       138  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  EMAIL        direct       420  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  IBAN         direct       246  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PER          direct      1756  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PHONE        direct       346  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PIVA         direct       100  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PLATE        direct        30  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  AGE          quasi        307  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  DATE         quasi       1047  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  HEALTH       quasi        243  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  LOC          quasi       1792  7.9 [6.0, 9.9]%          7.9 [6.0, 9.9]%        5.8 [4.5, 7.2]%
+  ORG          quasi        667  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PROFESSION   quasi        399  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  by domain (doc_leak_rate): clinical=0.0 [0.0, 0.0]%, financial=1.0 [0.0, 3.0]%, hr=0.0 [0.0, 0.0]%, legal=0.0 [0.0, 0.0]%
+  PER strict leak by surface form: first=0.0 [0.0, 0.0]% (n=53), full=0.0 [0.0, 0.0]% (n=910), initial=0.0 [0.0, 0.0]% (n=161), inverted=0.0 [0.0, 0.0]% (n=163), surname=0.0 [0.0, 0.0]% (n=295), upper=0.0 [0.0, 0.0]% (n=174)
+  k-anonymity: corpus k median=1 unique=72.8%; population k̂ median=35,059 p10=367 share k̂<11=1.5% k̂<100=5.0%
+  quasi-identifier survival: age=69%, city=2%, diagnosis=25%, employer=0%, gender=100%, marital_status=20%, nationality=0%, profession=67%
+  -> results/eval/llm_self-haiku-5-5-low__typed__direct-org-loc__test.eval.json
+TOTAL                    37857                           158.35
+
+=================== [18:05:41] B3  LLM attacker with Sonnet 5.5 on the typed condition (attacker-strength check)
+{
+ "model": "claude-sonnet-5-5",
+ "effort": "medium",
+ "n_docs": 400,
+ "attr_recovery": {
+  "gender": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 400,
+   "k": 400,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9904877055170676,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.6875,
+   "lo": 0.6425,
+   "hi": 0.7325,
+   "n": 400,
+   "k": 275,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6404744500558304,
+   "wilson_hi": 0.7309584395130699,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.02,
+   "lo": 0.0075,
+   "hi": 0.035,
+   "n": 400,
+   "k": 8,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.010168386739211567,
+   "wilson_hi": 0.038963415964403725,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.655,
+   "lo": 0.61,
+   "hi": 0.7,
+   "n": 400,
+   "k": 262,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6071390163633785,
+   "wilson_hi": 0.6999121723469124,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.36,
+   "lo": 0.295,
+   "hi": 0.43,
+   "n": 200,
+   "k": 72,
+   "clusters": 200,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.29669197257531227,
+   "wilson_hi": 0.4285847188919973,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.26,
+   "lo": 0.2175,
+   "hi": 0.305,
+   "n": 400,
+   "k": 104,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21944164674727862,
+   "wilson_hi": 0.3051242546045291,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.26,
+   "lo": 0.2175,
+   "hi": 0.3025,
+   "n": 400,
+   "k": 104,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21944164674727862,
+   "wilson_hi": 0.3051242546045291,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 1.0,
+  "age": 0.6875,
+  "city": 0.2525,
+  "profession": 0.66,
+  "employer": 0.41,
+  "nationality": 0.2625,
+  "marital_status": 0.2625,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 0.07920792079207921,
+  "profession": 0.9924242424242424,
+  "employer": 0.8780487804878049,
+  "nationality": 0.9904761904761905,
+  "marital_status": 0.9904761904761905,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.3475,
+  "lo": 0.3025,
+  "hi": 0.39506249999999965,
+  "n": 400,
+  "k": 139,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.3024860401715592,
+  "wilson_hi": 0.3954152096457353,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.2325,
+  "lo": 0.1925,
+  "hi": 0.2775,
+  "n": 400,
+  "k": 93,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.19376640683713905,
+  "wilson_hi": 0.27632267071122996,
+  "rule_of_three": null
+ },
+ "pop_k_median": 10071.9,
+ "pop_k_p10": 1.0,
+ "pop_k_lt11_share": 0.13,
+ "pop_k_lt100_share": 0.2475,
+ "by_domain": {
+  "clinical": {
+   "n": 100,
+   "pop_k_median": 1063.2505095333336,
+   "pop_k_lt11_share": 0.09
+  },
+  "financial": {
+   "n": 100,
+   "pop_k_median": 35058.58888888889,
+   "pop_k_lt11_share": 0.17
+  },
+  "hr": {
+   "n": 100,
+   "pop_k_median": 20.52,
+   "pop_k_lt11_share": 0.26
+  },
+  "legal": {
+   "n": 100,
+   "pop_k_median": 87289.8,
+   "pop_k_lt11_share": 0.0
+  }
+ },
+ "refusals": 0,
+ "tokens": {
+  "input": 374392,
+  "output": 39428
+ },
+ "pseudo": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+ "system": "presidio+regex"
+}
+TOTAL                    39425                           167.51
+
+=================== [18:08:12] done (small)
+TOTAL                    39667                           169.18
+EXIT=0

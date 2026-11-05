@@ -1,0 +1,302 @@
+{
+ "model": "ollama:qwen2.5:14b",
+ "effort": "medium",
+ "n_docs": 4,
+ "attr_recovery": {
+  "gender": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 4,
+   "k": 4,
+   "clusters": 4,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.5101091596030786,
+   "wilson_hi": 0.9999999999999999,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.75,
+   "lo": 0.25,
+   "hi": 1.0,
+   "n": 4,
+   "k": 3,
+   "clusters": 4,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.3006418400969081,
+   "wilson_hi": 0.954412739704631,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 4,
+   "k": 0,
+   "clusters": 4,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.0,
+   "wilson_hi": 0.4898908403969213,
+   "rule_of_three": 0.75
+  },
+  "profession": {
+   "rate": 0.5,
+   "lo": 0.0,
+   "hi": 1.0,
+   "n": 4,
+   "k": 2,
+   "clusters": 4,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.15003898774401986,
+   "wilson_hi": 0.8499610122559802,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.5,
+   "lo": 0.0,
+   "hi": 1.0,
+   "n": 2,
+   "k": 1,
+   "clusters": 2,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.09453120463920084,
+   "wilson_hi": 0.9054687953607992,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.25,
+   "lo": 0.0,
+   "hi": 0.75,
+   "n": 4,
+   "k": 1,
+   "clusters": 4,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.04558726029536886,
+   "wilson_hi": 0.6993581599030918,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.25,
+   "lo": 0.0,
+   "hi": 0.75,
+   "n": 4,
+   "k": 1,
+   "clusters": 4,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.04558726029536886,
+   "wilson_hi": 0.6993581599030918,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 1,
+   "k": 1,
+   "clusters": 1,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.2065493117918027,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 1.0,
+  "age": 0.75,
+  "city": 1.0,
+  "profession": 0.5,
+  "employer": 1.0,
+  "nationality": 0.25,
+  "marital_status": 0.25,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 0.0,
+  "profession": 1.0,
+  "employer": 0.5,
+  "nationality": 1.0,
+  "marital_status": 1.0,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.25,
+  "lo": 0.0,
+  "hi": 0.75,
+  "n": 4,
+  "k": 1,
+  "clusters": 4,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.04558726029536886,
+  "wilson_hi": 0.6993581599030918,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.0,
+  "lo": 0.0,
+  "hi": 0.0,
+  "n": 4,
+  "k": 0,
+  "clusters": 4,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.0,
+  "wilson_hi": 0.4898908403969213,
+  "rule_of_three": 0.75
+ },
+ "pop_k_median": 29351.7486696,
+ "pop_k_p10": 2288.2562130400006,
+ "pop_k_lt11_share": 0.25,
+ "pop_k_lt100_share": 0.25,
+ "by_domain": {
+  "clinical": {
+   "n": 1,
+   "pop_k_median": 7625.1873768000005,
+   "pop_k_lt11_share": 0.0
+  },
+  "financial": {
+   "n": 1,
+   "pop_k_median": 51078.3099624,
+   "pop_k_lt11_share": 0.0
+  },
+  "hr": {
+   "n": 1,
+   "pop_k_median": 1.0,
+   "pop_k_lt11_share": 1.0
+  },
+  "legal": {
+   "n": 1,
+   "pop_k_median": 28818726.0,
+   "pop_k_lt11_share": 0.0
+  }
+ },
+ "refusals": 0,
+ "tokens": {
+  "input": 3126,
+  "output": 353
+ },
+ "per_document": [
+  {
+   "doc_id": "financial_test_00000",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 51078.3099624,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 25,
+    "city": "LOC_0004",
+    "profession": "impiegato",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00000",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 7625.1873768000005,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 51,
+    "city": "LOC_0004",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "scompenso cardiaco",
+    "surname": "PER_f_0002",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00000",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 32,
+    "city": "LOC_0002",
+    "profession": "operaio",
+    "employer": "Autotrasporti Veloci",
+    "nationality": "italiana",
+    "marital_status": "coniugato",
+    "diagnosis": null,
+    "surname": "RICCARDI",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00000",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "PER_m_0001",
+    "first_name": null
+   }
+  }
+ ],
+ "pseudo": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+ "system": "presidio+regex"
+}

@@ -1,0 +1,3160 @@
+{
+ "model": "ollama:qwen2.5:14b",
+ "effort": "medium",
+ "n_docs": 100,
+ "attr_recovery": {
+  "gender": {
+   "rate": 0.97,
+   "lo": 0.93,
+   "hi": 1.0,
+   "n": 100,
+   "k": 97,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9154806351014251,
+   "wilson_hi": 0.9897454760557185,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.68,
+   "lo": 0.59,
+   "hi": 0.77,
+   "n": 100,
+   "k": 68,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.583373813107172,
+   "wilson_hi": 0.7633085273359894,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 100,
+   "k": 0,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.0,
+   "wilson_hi": 0.03699349876899627,
+   "rule_of_three": 0.03
+  },
+  "profession": {
+   "rate": 0.67,
+   "lo": 0.57,
+   "hi": 0.76,
+   "n": 100,
+   "k": 67,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.5730534371634074,
+   "wilson_hi": 0.754368773255134,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 50,
+   "k": 0,
+   "clusters": 50,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.0,
+   "wilson_hi": 0.07134760017861413,
+   "rule_of_three": 0.06
+  },
+  "nationality": {
+   "rate": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 100,
+   "k": 0,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.0,
+   "wilson_hi": 0.03699349876899627,
+   "rule_of_three": 0.03
+  },
+  "marital_status": {
+   "rate": 0.3,
+   "lo": 0.21,
+   "hi": 0.39,
+   "n": 100,
+   "k": 30,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21894885238515716,
+   "wilson_hi": 0.39584854712244144,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 0.96,
+   "lo": 0.88,
+   "hi": 1.0,
+   "n": 25,
+   "k": 24,
+   "clusters": 25,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.8045593608838223,
+   "wilson_hi": 0.9929037665766179,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 0.98,
+  "age": 0.68,
+  "city": 0.97,
+  "profession": 0.71,
+  "employer": 0.9,
+  "nationality": 0.28,
+  "marital_status": 0.31,
+  "diagnosis": 0.96
+ },
+ "attr_precision": {
+  "gender": 0.9897959183673469,
+  "age": 1.0,
+  "city": 0.0,
+  "profession": 0.9436619718309859,
+  "employer": 0.0,
+  "nationality": 0.0,
+  "marital_status": 0.967741935483871,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.0,
+  "lo": 0.0,
+  "hi": 0.0,
+  "n": 100,
+  "k": 0,
+  "clusters": 100,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.0,
+  "wilson_hi": 0.03699349876899627,
+  "rule_of_three": 0.03
+ },
+ "first_name_recovery": {
+  "rate": 0.0,
+  "lo": 0.0,
+  "hi": 0.0,
+  "n": 100,
+  "k": 0,
+  "clusters": 100,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.0,
+  "wilson_hi": 0.03699349876899627,
+  "rule_of_three": 0.03
+ },
+ "pop_k_median": 33379.682737829164,
+ "pop_k_p10": 372.25129727406363,
+ "pop_k_lt11_share": 0.01,
+ "pop_k_lt100_share": 0.08,
+ "by_domain": {
+  "clinical": {
+   "n": 25,
+   "pop_k_median": 1604.242414,
+   "pop_k_lt11_share": 0.04
+  },
+  "financial": {
+   "n": 25,
+   "pop_k_median": 49148.127168,
+   "pop_k_lt11_share": 0.0
+  },
+  "hr": {
+   "n": 25,
+   "pop_k_median": 107290.68283733334,
+   "pop_k_lt11_share": 0.0
+  },
+  "legal": {
+   "n": 25,
+   "pop_k_median": 122002.99802880001,
+   "pop_k_lt11_share": 0.0
+  }
+ },
+ "refusals": 0,
+ "tokens": {
+  "input": 75007,
+  "output": 8728
+ },
+ "per_document": [
+  {
+   "doc_id": "financial_test_00000",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 51078.3099624,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 25,
+    "city": "LOC_0002",
+    "profession": "impiegato",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00000",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 7625.1873768000005,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 51,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "scompenso cardiaco",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00000",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 22328.518354991997,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 32,
+    "city": "LOC_0001",
+    "profession": "operaio",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "coniugato",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00000",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00001",
+   "domain": "clinical",
+   "correct": {
+    "gender": false,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 7461.0444,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 41,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "carcinoma mammario",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00001",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 51078.3099624,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 60,
+    "city": "LOC_0001",
+    "profession": "casalingo",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00001",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00001",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00002",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 1604.242414,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 79,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "artrite reumatoide",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00002",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 57188.905326,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 54,
+    "city": "LOC_0002",
+    "profession": "operaia",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00002",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 2079.6169056119998,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 40,
+    "city": "LOC_0001",
+    "profession": "operaio",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "divorziato",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00002",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 7625.1873768000005,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 33,
+    "city": "LOC_0002",
+    "profession": "insegnante",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00003",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 221.7899584278,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 75,
+    "city": "LOC_0001",
+    "profession": "operaia",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "nubile",
+    "diagnosis": "carcinoma mammario",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00003",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 3931850.1734399996,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": "LOC_0003",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": "PER_f_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00003",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "lavoratore nel settore edilizio",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00003",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 122002.99802880001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 48,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00004",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 12833.939312,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 77,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "ipotiroidismo",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00004",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 116750.4227712,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 32,
+    "city": "LOC_0001",
+    "profession": "pensionato",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00004",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 49777.2231957504,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 34,
+    "city": "LOC_0001",
+    "profession": "pensionata",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00004",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 9636887.68,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0003",
+    "profession": "pensionata",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00005",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 641.6969656,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 74,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "infezione da HIV",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00005",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1925.0908968,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 77,
+    "city": "LOC_0003",
+    "profession": "magazziniere",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00005",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00005",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 122002.99802880001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 37,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00006",
+   "domain": "clinical",
+   "correct": {
+    "gender": false,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 58934000.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {}
+  },
+  {
+   "doc_id": "financial_test_00006",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1355187.3299999998,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0001",
+    "profession": "studentessa",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00006",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 21777.5351481408,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 53,
+    "city": "LOC_0001",
+    "profession": "impiegata",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00006",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 30115274.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00007",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 23.817086245324795,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 45,
+    "city": "LOC_0001",
+    "profession": "disoccupato",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "coniugato",
+    "diagnosis": "ictus ischemico",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00007",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 30115274.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00007",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 7296.9014232,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 37,
+    "city": "LOC_0002",
+    "profession": "insegnante",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00007",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 53376.3116376,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 39,
+    "city": "LOC_0002",
+    "profession": "impiegata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "PER_f_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00008",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 4826.900291446799,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 63,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": "celibe",
+    "diagnosis": "insufficienza renale cronica stadio 3",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00008",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 122002.99802880001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 49,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00008",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 13864.11270408,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 36,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "divorziato",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00008",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 48127.27242,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 74,
+    "city": "LOC_0002",
+    "profession": "operaio",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00009",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 28.876363452,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 70,
+    "city": "LOC_0001",
+    "profession": "studente",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "separato",
+    "diagnosis": "episodio depressivo maggiore",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00009",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 15087.752274,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 78,
+    "city": "LOC_0001",
+    "profession": "studentessa",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00009",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1906.2968442000001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 52,
+    "city": "LOC_0002",
+    "profession": "ingegnera",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00009",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 30115274.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "PER_f_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00010",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 24400.599605760002,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 40,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "diabete mellito di tipo 2",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00010",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 41889.977914368,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 75,
+    "city": "LOC_0002",
+    "profession": "pensionato",
+    "employer": "ORG_0002",
+    "nationality": "LOC_0003",
+    "marital_status": "coniugato",
+    "diagnosis": null,
+    "surname": "PER_m_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00010",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00010",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00011",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 42.033845414610006,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 58,
+    "city": "LOC_0001",
+    "profession": "imprenditrice",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "nubile",
+    "diagnosis": "celiachia",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00011",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 2287.5562130400003,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 23,
+    "city": "LOC_0003",
+    "profession": "magazziniera",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00011",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 107290.68283733334,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 77,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00011",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 4575.112426080001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 30,
+    "city": "LOC_0002",
+    "profession": "addetta alle pulizie",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00012",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 22875.5621304,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 43,
+    "city": "LOC_0001",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": "coniugata",
+    "diagnosis": "sindrome ansioso-depressiva",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00012",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 23798.689858064517,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 81,
+    "city": "LOC_0002",
+    "profession": "pensionato",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00012",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "Non specificato, ma lavora in un'unità produttiva",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00012",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 9636887.68,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00013",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 1604.242414,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 69,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "carcinoma del colon",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00013",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 23538.953432181603,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 58,
+    "city": "LOC_0002",
+    "profession": "impiegata",
+    "employer": "ORG_0002",
+    "nationality": "LOC_0003",
+    "marital_status": "nubile",
+    "diagnosis": null,
+    "surname": "PER_f_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00013",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 361383.288,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "addetta alle pulizie",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00013",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 57188.905326,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 57,
+    "city": "LOC_0002",
+    "profession": "operaia",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00014",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 97.09865462090322,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 80,
+    "city": "LOC_0001",
+    "profession": "pensionato",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "coniugato",
+    "diagnosis": "polmonite comunitaria",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00014",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 24869.387561290325,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 81,
+    "city": "LOC_0001",
+    "profession": "pensionata",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00014",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 24134.501457234,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 39,
+    "city": "LOC_0001",
+    "profession": "operaio",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "celibe",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00014",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 230549.80800000002,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0001",
+    "profession": "cameriere",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00015",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 4050.6215375541888,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 42,
+    "city": "LOC_0003",
+    "profession": "impiegata",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "coniugata",
+    "diagnosis": "ipertensione arteriosa",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00015",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 15087.752274,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 74,
+    "city": null,
+    "profession": "studentessa",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00015",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 4034621.6400000006,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "impiegato",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00015",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 9221992.32,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "pensionato",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00016",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 55.999376095219205,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 41,
+    "city": "LOC_0003",
+    "profession": "magazziniera",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "coniugata",
+    "diagnosis": "asma bronchiale",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00016",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 54726.760674,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 34,
+    "city": "LOC_0002",
+    "profession": "operaio",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00016",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00016",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00017",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 23350.08455424,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 18,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "diabete mellito di tipo 2",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00017",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 9531.484221,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 22,
+    "city": "LOC_0002",
+    "profession": "artigiana",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00017",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "Lavoratore nel settore edilizio",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00017",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 15087.752274,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 72,
+    "city": "LOC_0002",
+    "profession": "studentessa",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00018",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 1346.705181313657,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 62,
+    "city": "LOC_0003",
+    "profession": "studente",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "celibe",
+    "diagnosis": "ipertensione arteriosa",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00018",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 4066898.6131200003,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "pensionato",
+    "employer": "ORG_0002",
+    "nationality": "LOC_0003",
+    "marital_status": "celibe",
+    "diagnosis": null,
+    "surname": "PER_m_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00018",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 28818726.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": null,
+    "city": "LOC_0004",
+    "profession": "lavoratore nel settore edilizio",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00018",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 51078.3099624,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 43,
+    "city": "LOC_0002",
+    "profession": "impiegato",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00019",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 1906.2968442000001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 25,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "carcinoma del colon",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00019",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 17156.6715978,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 44,
+    "city": "LOC_0002",
+    "profession": "studentessa",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00019",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1345.0830532675202,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 34,
+    "city": "LOC_0001",
+    "profession": "cameriera",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "nubile",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00019",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 30115274.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0001",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "PER_f_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00020",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 25.568342586892797,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 63,
+    "city": "LOC_0001",
+    "profession": "pensionato",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "vedovo",
+    "diagnosis": "colecistite acuta litiasica",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00020",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 14455.33152,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "addetta alle pulizie",
+    "employer": null,
+    "nationality": "LOC_0003",
+    "marital_status": "separata",
+    "diagnosis": null,
+    "surname": "PER_f_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00020",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 595.4271561331199,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 29,
+    "city": "LOC_0001",
+    "profession": "barista",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "coniugato",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00020",
+   "domain": "legal",
+   "correct": {
+    "gender": false,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 58934000.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {}
+  },
+  {
+   "doc_id": "clinical_test_00021",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 388.5841806451613,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 83,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "ictus ischemico",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00021",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 4517291.1,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0003",
+    "profession": "operaia",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00021",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 8906.2188561024,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 45,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0003",
+    "marital_status": "vedova",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00021",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 122002.99802880001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 37,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00022",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 225.25534693418402,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 60,
+    "city": "LOC_0001",
+    "profession": "impiegato",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "celibe",
+    "diagnosis": "disturbo bipolare",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00022",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 53376.3116376,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 60,
+    "city": "LOC_0003",
+    "profession": "impiegata",
+    "employer": "ORG_0002",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00022",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 30115274.0,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": null,
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00022",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 4575.112426080001,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 33,
+    "city": "LOC_0002",
+    "profession": "addetta alle pulizie",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00023",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 9653.800582893598,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 37,
+    "city": "LOC_0003",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": "celibe",
+    "diagnosis": "asma bronchiale",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00023",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 49148.127168,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "cassiera",
+    "employer": null,
+    "nationality": "LOC_0003",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": "PER_f_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00023",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 45.751124260800005,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 17,
+    "city": "LOC_0001",
+    "profession": "idraulica",
+    "employer": "ORG_0001",
+    "nationality": "LOC_0002",
+    "marital_status": "separata",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00023",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 54726.760674,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 30,
+    "city": "LOC_0002",
+    "profession": "operaio",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "PER_m_0001",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "clinical_test_00024",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 1.1466691728240002,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 69,
+    "city": "LOC_0001",
+    "profession": "studentessa",
+    "employer": null,
+    "nationality": "LOC_0002",
+    "marital_status": "divorziata",
+    "diagnosis": "frattura del collo del femore",
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "financial_test_00024",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 2333.3073373008,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 51,
+    "city": "LOC_0002",
+    "profession": "commessa",
+    "employer": "ORG_0002",
+    "nationality": "LOC_0003",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00024",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 9636887.68,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "LOC_0002",
+    "profession": "pensionata",
+    "employer": "ORG_0001",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "legal_test_00024",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 53376.3116376,
+   "surname_recovered": false,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 47,
+    "city": "LOC_0002",
+    "profession": "impiegata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": null,
+    "first_name": null
+   }
+  }
+ ],
+ "pseudo": "results/pseudo/oracle__typed__direct-org-loc__test.jsonl",
+ "system": "oracle"
+}

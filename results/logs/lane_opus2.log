@@ -1,0 +1,43 @@
+
+=================== [17:52:31] A1  Opus 5.5 consumer, medium, 6 conditions (resume: consumer calls cached, judge finishes)
+12000 frontier calls for 400 docs x 6 conditions (cached calls are free); ~4,438,750 input tokens (+ judge: 4000 calls)
+TOTAL                    32570                           128.23
+
+=================== [17:56:36] A3  LLM attacker (Opus 5.5, medium) on raw and on every pseudonymized condition
+TOTAL                    44382                           195.77
+
+=================== [18:17:18] A4  Opus 5.5 as its own anonymizer (llm_self), low and medium effort
+llm_self-opus-5-5-low mode=typed policy=direct+org+loc: 400 docs in 120.9s -> results/pseudo/llm_self-opus-5-5-low__typed__direct-org-loc__test.jsonl
+system=llm_self-opus-5-5-low mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.2 [0.0, 0.8]%
+llm_self-opus-5-5-medium mode=typed policy=direct+org+loc: 400 docs in 272.8s -> results/pseudo/llm_self-opus-5-5-medium__typed__direct-org-loc__test.jsonl
+system=llm_self-opus-5-5-medium mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.2 [0.0, 0.8]%
+TOTAL                    46927                           216.06
+
+=================== [18:24:39] A5  Run-to-run variance: typed vs raw, Opus medium, 100 stratified docs, two extra runs
+1000 frontier calls for 100 docs x 2 conditions (cached calls are free); ~352,365 input tokens (+ judge: 0 calls)
+1000 frontier calls for 100 docs x 2 conditions (cached calls are free); ~352,365 input tokens (+ judge: 0 calls)
+TOTAL                    49429                           229.35
+
+=================== [18:31:58] A2  Opus 5.5 consumer, low effort (raw/typed/opaque)
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+TOTAL                    49429                           229.35
+
+=================== [18:32:28] A6  Cross-judge: Opus 5.5 as the summary judge (typed/opaque)
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+TOTAL                    51030                           242.34
+
+=================== [18:38:23] A8  Full-split replicate of the typed condition (Opus medium, rep3)
+4000 frontier calls for 400 docs x 2 conditions (cached calls are free); ~1,419,554 input tokens (+ judge: 0 calls)
+TOTAL                    55030                           266.16
+
+=================== [18:54:17] A7  Opus 5.5 consumer, high effort (raw/typed), 100 stratified docs
+1000 frontier calls for 100 docs x 2 conditions (cached calls are free); ~352,365 input tokens (+ judge: 0 calls)
+TOTAL                    56030                           272.86
+
+=================== [18:58:58] done (opus2)
+TOTAL                    56030                           272.86
+EXIT=0

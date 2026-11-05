@@ -1,0 +1,1474 @@
+
+=================== [16:53:43] A1  Opus 5.5 consumer, medium effort, 6 conditions (raw/typed/opaque/direct_only/all/oracle)
+12000 frontier calls for 400 docs x 6 conditions (cached calls are free); ~4,438,750 input tokens (+ judge: 4000 calls)
+TOTAL                    30203                           118.19
+
+=================== [17:52:59] A2  Opus 5.5 consumer, low effort (raw/typed/opaque)
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+{
+ "model": "claude-opus-5-5",
+ "effort": "low",
+ "run_tag": "",
+ "n_docs": 400,
+ "tasks": [
+  "summarize",
+  "extract",
+  "classify",
+  "qa"
+ ],
+ "conditions": {
+  "typed": {
+   "path": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  },
+  "opaque": {
+   "path": "results/pseudo/presidio-regex__opaque__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  }
+ },
+ "deltas_vs_raw": {
+  "qa:typed": {
+   "diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.80375,
+   "mean_cond": 0.80375
+  },
+  "qa:opaque": {
+   "diff": -0.00125,
+   "lo": -0.00375,
+   "hi": 0.0,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.80375,
+   "mean_cond": 0.8025
+  },
+  "classify:typed": {
+   "diff": -0.0375,
+   "lo": -0.065,
+   "hi": -0.01,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.9275,
+   "mean_cond": 0.89
+  },
+  "classify:opaque": {
+   "diff": -0.04,
+   "lo": -0.07,
+   "hi": -0.01,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.9275,
+   "mean_cond": 0.8875
+  },
+  "extract:typed": {
+   "diff": -0.016666666666666666,
+   "lo": -0.028333333333333332,
+   "hi": -0.006666666666666666,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.74625,
+   "mean_cond": 0.7295833333333335
+  },
+  "extract:opaque": {
+   "diff": -0.024166666666666666,
+   "lo": -0.0375,
+   "hi": -0.0125,
+   "n": 400,
+   "B": 2000,
+   "mean_raw": 0.74625,
+   "mean_cond": 0.7220833333333333
+  }
+ },
+ "agreement": {
+  "typed": {
+   "contexts": 397,
+   "errors": 16,
+   "rate": {
+    "rate": 0.04030226700251889,
+    "lo": 0.020617231600985875,
+    "hi": 0.06117892156862744,
+    "n": 397,
+    "k": 16,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.024957367984482257,
+    "wilson_hi": 0.06445818045036661,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 217
+  },
+  "opaque": {
+   "contexts": 431,
+   "errors": 21,
+   "rate": {
+    "rate": 0.048723897911832945,
+    "lo": 0.0277761739799846,
+    "hi": 0.07039146128951952,
+    "n": 431,
+    "k": 21,
+    "clusters": 400,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.03208639270755259,
+    "wilson_hi": 0.07333469340330488,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 2390
+  }
+ },
+ "judge_model": "claude-sonnet-5-5",
+ "judge_vs_raw": {
+  "typed": {
+   "win_rate_vs_raw": 0.6632791327913279,
+   "lo": 0.6226287262872628,
+   "hi": 0.7066395663956639,
+   "n": 369
+  },
+  "opaque": {
+   "win_rate_vs_raw": 0.7068493150684931,
+   "lo": 0.665068493150685,
+   "hi": 0.7472602739726028,
+   "n": 365
+  }
+ },
+ "refusals": 0,
+ "max_tokens_hits": 0,
+ "tokens": {
+  "input": 5793207,
+  "output": 1016709
+ }
+}
+TOTAL                    45295                           201.22
+
+=================== [18:18:42] A3  LLM attacker (Opus 5.5, medium) on raw and on every pseudonymized condition
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "n_docs": 400,
+ "attr_recovery": {
+  "gender": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 400,
+   "k": 400,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9904877055170676,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 400,
+   "k": 400,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9904877055170676,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.8775,
+   "lo": 0.845,
+   "hi": 0.91,
+   "n": 400,
+   "k": 351,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.8417313726716423,
+   "wilson_hi": 0.9060868449937435,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.66,
+   "lo": 0.6125,
+   "hi": 0.7075,
+   "n": 400,
+   "k": 264,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6122516847047045,
+   "wilson_hi": 0.7047043810607573,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.9,
+   "lo": 0.855,
+   "hi": 0.94,
+   "n": 200,
+   "k": 180,
+   "clusters": 200,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.8505941871160769,
+   "wilson_hi": 0.9343295515487526,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.9,
+   "lo": 0.87,
+   "hi": 0.9275,
+   "n": 400,
+   "k": 360,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.8666894233787863,
+   "wilson_hi": 0.9257007410348677,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.2575,
+   "lo": 0.2149375,
+   "hi": 0.3,
+   "n": 400,
+   "k": 103,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21709827483611427,
+   "wilson_hi": 0.3025151879881081,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 1.0,
+  "profession": 0.66,
+  "employer": 0.9,
+  "nationality": 0.9425,
+  "marital_status": 0.275,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 0.8775,
+  "profession": 1.0,
+  "employer": 1.0,
+  "nationality": 0.9549071618037135,
+  "marital_status": 0.9363636363636364,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 1.0,
+  "lo": 1.0,
+  "hi": 1.0,
+  "n": 400,
+  "k": 400,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.9904877055170676,
+  "wilson_hi": 1.0,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.9875,
+  "lo": 0.9775,
+  "hi": 0.9975,
+  "n": 400,
+  "k": 395,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.9710762636252322,
+  "wilson_hi": 0.9946492492539086,
+  "rule_of_three": null
+ },
+ "pop_k_median": 1.003139,
+ "pop_k_p10": 1.0,
+ "pop_k_lt11_share": 0.62,
+ "pop_k_lt100_share": 0.7925,
+ "by_domain": {
+  "clinical": {
+   "n": 100,
+   "pop_k_median": 10.158787527777779,
+   "pop_k_lt11_share": 0.51
+  },
+  "financial": {
+   "n": 100,
+   "pop_k_median": 1.0,
+   "pop_k_lt11_share": 0.86
+  },
+  "hr": {
+   "n": 100,
+   "pop_k_median": 1.0,
+   "pop_k_lt11_share": 1.0
+  },
+  "legal": {
+   "n": 100,
+   "pop_k_median": 204.78276,
+   "pop_k_lt11_share": 0.11
+  }
+ },
+ "refusals": 0,
+ "tokens": {
+  "input": 382121,
+  "output": 138866
+ },
+ "pseudo": "raw",
+ "system": "raw"
+}
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "n_docs": 400,
+ "attr_recovery": {
+  "gender": {
+   "rate": 0.995,
+   "lo": 0.9875,
+   "hi": 1.0,
+   "n": 400,
+   "k": 398,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.981955081404273,
+   "wilson_hi": 0.9986277470576237,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.6875,
+   "lo": 0.6425,
+   "hi": 0.7325,
+   "n": 400,
+   "k": 275,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6404744500558304,
+   "wilson_hi": 0.7309584395130699,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.025,
+   "lo": 0.0125,
+   "hi": 0.04,
+   "n": 400,
+   "k": 10,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.013635091682402706,
+   "wilson_hi": 0.04540158807638326,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.6575,
+   "lo": 0.6075,
+   "hi": 0.7025,
+   "n": 400,
+   "k": 263,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6096946454033335,
+   "wilson_hi": 0.7023089818345426,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.365,
+   "lo": 0.3,
+   "hi": 0.435,
+   "n": 200,
+   "k": 73,
+   "clusters": 200,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.3014052641760262,
+   "wilson_hi": 0.43368297402459366,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.3525,
+   "lo": 0.305,
+   "hi": 0.4,
+   "n": 400,
+   "k": 141,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.30728664625413954,
+   "wilson_hi": 0.4005194806183256,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.25,
+   "lo": 0.205,
+   "hi": 0.295,
+   "n": 400,
+   "k": 100,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.2100790139421128,
+   "wilson_hi": 0.2946771332993535,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 0.995,
+  "age": 0.6875,
+  "city": 0.3075,
+  "profession": 0.6725,
+  "employer": 0.365,
+  "nationality": 0.3575,
+  "marital_status": 0.2675,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 0.08130081300813008,
+  "profession": 0.9776951672862454,
+  "employer": 1.0,
+  "nationality": 0.986013986013986,
+  "marital_status": 0.9345794392523364,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.35,
+  "lo": 0.305,
+  "hi": 0.39506249999999965,
+  "n": 400,
+  "k": 140,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.30488564866609746,
+  "wilson_hi": 0.39796803967878236,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.2375,
+  "lo": 0.1975,
+  "hi": 0.28,
+  "n": 400,
+  "k": 95,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.19841751152039971,
+  "wilson_hi": 0.2815764430831399,
+  "rule_of_three": null
+ },
+ "pop_k_median": 10071.9,
+ "pop_k_p10": 1.0,
+ "pop_k_lt11_share": 0.1325,
+ "pop_k_lt100_share": 0.25,
+ "by_domain": {
+  "clinical": {
+   "n": 100,
+   "pop_k_median": 1009.6969214333335,
+   "pop_k_lt11_share": 0.09
+  },
+  "financial": {
+   "n": 100,
+   "pop_k_median": 35058.58888888889,
+   "pop_k_lt11_share": 0.17
+  },
+  "hr": {
+   "n": 100,
+   "pop_k_median": 20.52,
+   "pop_k_lt11_share": 0.27
+  },
+  "legal": {
+   "n": 100,
+   "pop_k_median": 87289.8,
+   "pop_k_lt11_share": 0.0
+  }
+ },
+ "refusals": 1,
+ "tokens": {
+  "input": 374392,
+  "output": 174037
+ },
+ "pseudo": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+ "system": "presidio+regex"
+}
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "n_docs": 400,
+ "attr_recovery": {
+  "gender": {
+   "rate": 0.9975,
+   "lo": 0.9925,
+   "hi": 1.0,
+   "n": 400,
+   "k": 399,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9859767147714087,
+   "wilson_hi": 0.9995585522180739,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.6875,
+   "lo": 0.6449375,
+   "hi": 0.735,
+   "n": 400,
+   "k": 275,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6404744500558304,
+   "wilson_hi": 0.7309584395130699,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.0325,
+   "lo": 0.0175,
+   "hi": 0.0525,
+   "n": 400,
+   "k": 13,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.019089842300120428,
+   "wilson_hi": 0.054804153041421555,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.6575,
+   "lo": 0.6125,
+   "hi": 0.705,
+   "n": 400,
+   "k": 263,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6096946454033335,
+   "wilson_hi": 0.7023089818345426,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.36,
+   "lo": 0.29,
+   "hi": 0.425,
+   "n": 200,
+   "k": 72,
+   "clusters": 200,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.29669197257531227,
+   "wilson_hi": 0.4285847188919973,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.3175,
+   "lo": 0.275,
+   "hi": 0.3625,
+   "n": 400,
+   "k": 127,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.2738017727540264,
+   "wilson_hi": 0.36467021473224404,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.2525,
+   "lo": 0.21,
+   "hi": 0.2975,
+   "n": 400,
+   "k": 101,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21241694109628234,
+   "wilson_hi": 0.2972916446727694,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 1.0,
+  "age": 0.6875,
+  "city": 0.3775,
+  "profession": 0.665,
+  "employer": 0.365,
+  "nationality": 0.32,
+  "marital_status": 0.27,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 0.9975,
+  "age": 1.0,
+  "city": 0.08609271523178808,
+  "profession": 0.9887218045112782,
+  "employer": 0.9863013698630136,
+  "nationality": 0.9921875,
+  "marital_status": 0.9351851851851852,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.36,
+  "lo": 0.3149375,
+  "hi": 0.4075,
+  "n": 400,
+  "k": 144,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.31449790726487914,
+  "wilson_hi": 0.40816553519034204,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.2375,
+  "lo": 0.1975,
+  "hi": 0.28,
+  "n": 400,
+  "k": 95,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.19841751152039971,
+  "wilson_hi": 0.2815764430831399,
+  "rule_of_three": null
+ },
+ "pop_k_median": 9816.666666666666,
+ "pop_k_p10": 1.0,
+ "pop_k_lt11_share": 0.1275,
+ "pop_k_lt100_share": 0.2525,
+ "by_domain": {
+  "clinical": {
+   "n": 100,
+   "pop_k_median": 1009.6969214333335,
+   "pop_k_lt11_share": 0.08
+  },
+  "financial": {
+   "n": 100,
+   "pop_k_median": 35058.58888888889,
+   "pop_k_lt11_share": 0.16
+  },
+  "hr": {
+   "n": 100,
+   "pop_k_median": 20.52,
+   "pop_k_lt11_share": 0.27
+  },
+  "legal": {
+   "n": 100,
+   "pop_k_median": 87289.8,
+   "pop_k_lt11_share": 0.0
+  }
+ },
+ "refusals": 0,
+ "tokens": {
+  "input": 387620,
+  "output": 168670
+ },
+ "pseudo": "results/pseudo/presidio-regex__opaque__direct-org-loc__test.jsonl",
+ "system": "presidio+regex"
+}
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "n_docs": 400,
+ "attr_recovery": {
+  "gender": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 400,
+   "k": 400,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9904877055170676,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.6875,
+   "lo": 0.6425,
+   "hi": 0.7325,
+   "n": 400,
+   "k": 275,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6404744500558304,
+   "wilson_hi": 0.7309584395130699,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.875,
+   "lo": 0.8424375000000001,
+   "hi": 0.9075,
+   "n": 400,
+   "k": 350,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.8389809021736974,
+   "wilson_hi": 0.9038848769641032,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.66,
+   "lo": 0.6125,
+   "hi": 0.7025624999999996,
+   "n": 400,
+   "k": 264,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6122516847047045,
+   "wilson_hi": 0.7047043810607573,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.86,
+   "lo": 0.81,
+   "hi": 0.91,
+   "n": 200,
+   "k": 172,
+   "clusters": 200,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.8051011908581415,
+   "wilson_hi": 0.9013301739402052,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.7425,
+   "lo": 0.6975,
+   "hi": 0.785,
+   "n": 400,
+   "k": 297,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.697484812011892,
+   "wilson_hi": 0.7829017251638858,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.2525,
+   "lo": 0.21,
+   "hi": 0.2975,
+   "n": 400,
+   "k": 101,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21241694109628234,
+   "wilson_hi": 0.2972916446727694,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 1.0,
+  "age": 0.6875,
+  "city": 1.0,
+  "profession": 0.665,
+  "employer": 0.87,
+  "nationality": 0.7775,
+  "marital_status": 0.27,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 0.875,
+  "profession": 0.9924812030075187,
+  "employer": 0.9885057471264368,
+  "nationality": 0.954983922829582,
+  "marital_status": 0.9351851851851852,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.4725,
+  "lo": 0.4225,
+  "hi": 0.5225,
+  "n": 400,
+  "k": 189,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.4240692028993238,
+  "wilson_hi": 0.5214539732972375,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.3275,
+  "lo": 0.2825,
+  "hi": 0.37256249999999963,
+  "n": 400,
+  "k": 131,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.2833400425852472,
+  "wilson_hi": 0.3749416990113647,
+  "rule_of_three": null
+ },
+ "pop_k_median": 17.7268,
+ "pop_k_p10": 1.0,
+ "pop_k_lt11_share": 0.445,
+ "pop_k_lt100_share": 0.7425,
+ "by_domain": {
+  "clinical": {
+   "n": 100,
+   "pop_k_median": 10.158787527777779,
+   "pop_k_lt11_share": 0.51
+  },
+  "financial": {
+   "n": 100,
+   "pop_k_median": 1.0,
+   "pop_k_lt11_share": 0.67
+  },
+  "hr": {
+   "n": 100,
+   "pop_k_median": 1.0,
+   "pop_k_lt11_share": 0.52
+  },
+  "legal": {
+   "n": 100,
+   "pop_k_median": 430.44444444444446,
+   "pop_k_lt11_share": 0.08
+  }
+ },
+ "refusals": 0,
+ "tokens": {
+  "input": 375096,
+  "output": 146101
+ },
+ "pseudo": "results/pseudo/presidio-regex__typed__direct_only__test.jsonl",
+ "system": "presidio+regex"
+}
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "n_docs": 400,
+ "attr_recovery": {
+  "gender": {
+   "rate": 0.9975,
+   "lo": 0.9925,
+   "hi": 1.0,
+   "n": 400,
+   "k": 399,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9859767147714087,
+   "wilson_hi": 0.9995585522180739,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.685,
+   "lo": 0.64,
+   "hi": 0.7325,
+   "n": 400,
+   "k": 274,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6379013663789354,
+   "wilson_hi": 0.7285790846623798,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.0275,
+   "lo": 0.0125,
+   "hi": 0.045,
+   "n": 400,
+   "k": 11,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.015423636191535604,
+   "wilson_hi": 0.048565482094835695,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.6625,
+   "lo": 0.615,
+   "hi": 0.7125,
+   "n": 400,
+   "k": 265,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6148101416775835,
+   "wilson_hi": 0.7070983626154634,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.355,
+   "lo": 0.289875,
+   "hi": 0.425,
+   "n": 200,
+   "k": 71,
+   "clusters": 200,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.2919862749369033,
+   "wilson_hi": 0.4234788697970958,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.335,
+   "lo": 0.2875,
+   "hi": 0.3825,
+   "n": 400,
+   "k": 134,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.290509081094798,
+   "wilson_hi": 0.38262997608456983,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.2525,
+   "lo": 0.21,
+   "hi": 0.295,
+   "n": 400,
+   "k": 101,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21241694109628234,
+   "wilson_hi": 0.2972916446727694,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 0.9975,
+  "age": 0.685,
+  "city": 0.2975,
+  "profession": 0.68,
+  "employer": 0.365,
+  "nationality": 0.34,
+  "marital_status": 0.2675,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 0.09243697478991597,
+  "profession": 0.9742647058823529,
+  "employer": 0.9726027397260274,
+  "nationality": 0.9852941176470589,
+  "marital_status": 0.9439252336448598,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.35,
+  "lo": 0.305,
+  "hi": 0.3975,
+  "n": 400,
+  "k": 140,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.30488564866609746,
+  "wilson_hi": 0.39796803967878236,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.2375,
+  "lo": 0.1975,
+  "hi": 0.28,
+  "n": 400,
+  "k": 95,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.19841751152039971,
+  "wilson_hi": 0.2815764430831399,
+  "rule_of_three": null
+ },
+ "pop_k_median": 10071.9,
+ "pop_k_p10": 1.0,
+ "pop_k_lt11_share": 0.1275,
+ "pop_k_lt100_share": 0.2475,
+ "by_domain": {
+  "clinical": {
+   "n": 100,
+   "pop_k_median": 1009.6969214333335,
+   "pop_k_lt11_share": 0.09
+  },
+  "financial": {
+   "n": 100,
+   "pop_k_median": 35058.58888888889,
+   "pop_k_lt11_share": 0.16
+  },
+  "hr": {
+   "n": 100,
+   "pop_k_median": 20.52,
+   "pop_k_lt11_share": 0.26
+  },
+  "legal": {
+   "n": 100,
+   "pop_k_median": 87289.8,
+   "pop_k_lt11_share": 0.0
+  }
+ },
+ "refusals": 1,
+ "tokens": {
+  "input": 373016,
+  "output": 172505
+ },
+ "pseudo": "results/pseudo/presidio-regex__typed__all__test.jsonl",
+ "system": "presidio+regex"
+}
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "n_docs": 400,
+ "attr_recovery": {
+  "gender": {
+   "rate": 0.9975,
+   "lo": 0.9925,
+   "hi": 1.0,
+   "n": 400,
+   "k": 399,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9859767147714087,
+   "wilson_hi": 0.9995585522180739,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.685,
+   "lo": 0.6375,
+   "hi": 0.7275,
+   "n": 400,
+   "k": 274,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6379013663789354,
+   "wilson_hi": 0.7285790846623798,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.0025,
+   "lo": 0.0,
+   "hi": 0.0075,
+   "n": 400,
+   "k": 1,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.00044144778192630255,
+   "wilson_hi": 0.014023285228591623,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.655,
+   "lo": 0.6075,
+   "hi": 0.7,
+   "n": 400,
+   "k": 262,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.6071390163633785,
+   "wilson_hi": 0.6999121723469124,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 200,
+   "k": 0,
+   "clusters": 200,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.0,
+   "wilson_hi": 0.018845326668962936,
+   "rule_of_three": 0.015
+  },
+  "nationality": {
+   "rate": 0.1025,
+   "lo": 0.075,
+   "hi": 0.1325,
+   "n": 400,
+   "k": 41,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.07645885280453395,
+   "wilson_hi": 0.13610342130939745,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.2575,
+   "lo": 0.215,
+   "hi": 0.3,
+   "n": 400,
+   "k": 103,
+   "clusters": 400,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.21709827483611427,
+   "wilson_hi": 0.3025151879881081,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 0.9975,
+  "age": 0.685,
+  "city": 0.3675,
+  "profession": 0.6775,
+  "employer": 0.0,
+  "nationality": 0.105,
+  "marital_status": 0.275,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 1.0,
+  "city": 0.006802721088435374,
+  "profession": 0.966789667896679,
+  "employer": null,
+  "nationality": 0.9761904761904762,
+  "marital_status": 0.9363636363636364,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 0.0,
+  "lo": 0.0,
+  "hi": 0.0,
+  "n": 400,
+  "k": 0,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.0,
+  "wilson_hi": 0.009512294482932589,
+  "rule_of_three": 0.0075
+ },
+ "first_name_recovery": {
+  "rate": 0.0,
+  "lo": 0.0,
+  "hi": 0.0,
+  "n": 400,
+  "k": 0,
+  "clusters": 400,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.0,
+  "wilson_hi": 0.009512294482932589,
+  "rule_of_three": 0.0075
+ },
+ "pop_k_median": 35058.58888888889,
+ "pop_k_p10": 352.18077000000005,
+ "pop_k_lt11_share": 0.0175,
+ "pop_k_lt100_share": 0.06,
+ "by_domain": {
+  "clinical": {
+   "n": 100,
+   "pop_k_median": 1160.1205777777777,
+   "pop_k_lt11_share": 0.06
+  },
+  "financial": {
+   "n": 100,
+   "pop_k_median": 47002.200000000004,
+   "pop_k_lt11_share": 0.01
+  },
+  "hr": {
+   "n": 100,
+   "pop_k_median": 87289.8,
+   "pop_k_lt11_share": 0.0
+  },
+  "legal": {
+   "n": 100,
+   "pop_k_median": 87289.8,
+   "pop_k_lt11_share": 0.0
+  }
+ },
+ "refusals": 1,
+ "tokens": {
+  "input": 374428,
+  "output": 172714
+ },
+ "pseudo": "results/pseudo/oracle__typed__direct-org-loc__test.jsonl",
+ "system": "oracle"
+}
+TOTAL                    45477                           203.55
+
+=================== [18:20:02] A4  Opus 5.5 as its own anonymizer (llm_self), low and medium effort
+llm_self-opus-5-5-low mode=typed policy=direct+org+loc: 400 docs in 0.8s -> results/pseudo/llm_self-opus-5-5-low__typed__direct-org-loc__test.jsonl
+system=llm_self-opus-5-5-low mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.2 [0.0, 0.8]%
+  direct-mention leak rate:                               0.0 [0.0, 0.0]%
+  over-redaction (spurious replacements / 1k tokens):      0.3
+  category     kind    mentions  strict leak [95% CI]      partial [95% CI]        entity-level
+  ADDRESS      direct       780  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  CF           direct       437  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  DATE_BIRTH   direct       227  0.0 [0.0, 0.0]%          0.4 [0.0, 1.4]%        0.0 [0.0, 0.0]%
+  DOC_ID       direct       138  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  EMAIL        direct       420  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  IBAN         direct       246  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PER          direct      1756  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PHONE        direct       346  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PIVA         direct       100  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PLATE        direct        30  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  AGE          quasi        307  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  DATE         quasi       1047  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  HEALTH       quasi        243  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  LOC          quasi       1792  0.3 [0.0, 0.8]%          0.3 [0.0, 0.8]%        0.2 [0.0, 0.5]%
+  ORG          quasi        667  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  PROFESSION   quasi        399  100.0 [100.0, 100.0]%    100.0 [100.0, 100.0]%  100.0 [100.0, 100.0]%
+  by domain (doc_leak_rate): clinical=0.0 [0.0, 0.0]%, financial=0.0 [0.0, 0.0]%, hr=0.0 [0.0, 0.0]%, legal=0.0 [0.0, 0.0]%
+  PER strict leak by surface form: first=0.0 [0.0, 0.0]% (n=53), full=0.0 [0.0, 0.0]% (n=910), initial=0.0 [0.0, 0.0]% (n=161), inverted=0.0 [0.0, 0.0]% (n=163), surname=0.0 [0.0, 0.0]% (n=295), upper=0.0 [0.0, 0.0]% (n=174)
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=35,059 p10=367 share k̂<11=1.5% k̂<100=5.2%
+  quasi-identifier survival: age=69%, city=0%, diagnosis=25%, employer=0%, gender=100%, marital_status=22%, nationality=0%, profession=67%
+  -> results/eval/llm_self-opus-5-5-low__typed__direct-org-loc__test.eval.json
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\__main__.py", line 3, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 381, in main
+    a.fn(a)
+    ~~~~^^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 72, in cmd_pseudonymize
+    res = list(ex.map(lambda d: ps.pseudonymize(d.text, d.doc_id, a.mode), docs))
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 639, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 311, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 72, in <lambda>
+    res = list(ex.map(lambda d: ps.pseudonymize(d.text, d.doc_id, a.mode), docs))
+                                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\pseudonymizers\base.py", line 70, in pseudonymize
+    spans = self.detect(text)
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\pseudonymizers\llm_ps.py", line 71, in detect
+    raw = self._call(text)
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\pseudonymizers\llm_ps.py", line 53, in _call
+    d = json.loads(f.read_text(encoding="utf-8"))
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\__main__.py", line 3, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 381, in main
+    a.fn(a)
+    ~~~~^^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 100, in cmd_evaluate
+    pdocs = load_pseudonymized(a.pseudo)
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\schema.py", line 144, in load_pseudonymized
+    return [PseudonymizedDocument.from_json(d) for d in read_jsonl(path)]
+                                                        ~~~~~~~~~~^^^^^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\schema.py", line 132, in read_jsonl
+    with Path(path).open("r", encoding="utf-8") as f:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results\\pseudo\\llm_self-opus-5-5-medium__typed__direct-org-loc__test.jsonl'
+TOTAL                    46433                           212.47
+
+=================== [18:23:37] A5  Run-to-run variance: typed vs raw, Opus medium, 100 docs, two extra runs with a fresh cache salt
+1000 frontier calls for 100 docs x 2 conditions (cached calls are free); ~352,365 input tokens (+ judge: 0 calls)
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "run_tag": "rep1",
+ "n_docs": 100,
+ "tasks": [
+  "summarize",
+  "extract",
+  "classify",
+  "qa"
+ ],
+ "conditions": {
+  "typed": {
+   "path": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  }
+ },
+ "deltas_vs_raw": {
+  "qa:typed": {
+   "diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 98,
+   "B": 2000,
+   "mean_raw": 1.0,
+   "mean_cond": 1.0
+  },
+  "extract:typed": {
+   "diff": -0.02040816326530612,
+   "lo": -0.05102040816326531,
+   "hi": 0.0,
+   "n": 98,
+   "B": 2000,
+   "mean_raw": 0.9914965986394557,
+   "mean_cond": 0.9710884353741496
+  },
+  "classify:typed": {
+   "diff": -0.04,
+   "lo": -0.1,
+   "hi": 0.01,
+   "n": 100,
+   "B": 2000,
+   "mean_raw": 0.95,
+   "mean_cond": 0.91
+  }
+ },
+ "agreement": {
+  "typed": {
+   "contexts": 96,
+   "errors": 9,
+   "rate": {
+    "rate": 0.09375,
+    "lo": 0.042105263157894736,
+    "hi": 0.1495443925233644,
+    "n": 96,
+    "k": 9,
+    "clusters": 100,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.05010810796843602,
+    "wilson_hi": 0.1686533076401225,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 68
+  }
+ },
+ "refusals": 0,
+ "max_tokens_hits": 0,
+ "tokens": {
+  "input": 600055,
+  "output": 171847
+ }
+}
+1000 frontier calls for 100 docs x 2 conditions (cached calls are free); ~352,365 input tokens (+ judge: 0 calls)
+{
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "run_tag": "rep2",
+ "n_docs": 100,
+ "tasks": [
+  "summarize",
+  "extract",
+  "classify",
+  "qa"
+ ],
+ "conditions": {
+  "typed": {
+   "path": "results/pseudo/presidio-regex__typed__direct-org-loc__test.jsonl",
+   "system": "presidio+regex"
+  }
+ },
+ "deltas_vs_raw": {
+  "qa:typed": {
+   "diff": 0.0,
+   "lo": 0.0,
+   "hi": 0.0,
+   "n": 98,
+   "B": 2000,
+   "mean_raw": 1.0,
+   "mean_cond": 1.0
+  },
+  "extract:typed": {
+   "diff": -0.02040816326530612,
+   "lo": -0.05102040816326531,
+   "hi": 0.0,
+   "n": 98,
+   "B": 2000,
+   "mean_raw": 0.9914965986394557,
+   "mean_cond": 0.9710884353741496
+  },
+  "classify:typed": {
+   "diff": -0.04,
+   "lo": -0.09,
+   "hi": 0.01,
+   "n": 100,
+   "B": 2000,
+   "mean_raw": 0.96,
+   "mean_cond": 0.92
+  }
+ },
+ "agreement": {
+  "typed": {
+   "contexts": 90,
+   "errors": 1,
+   "rate": {
+    "rate": 0.011111111111111112,
+    "lo": 0.0,
+    "hi": 0.03571428571428571,
+    "n": 90,
+    "k": 1,
+    "clusters": 100,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.0019640840792123256,
+    "wilson_hi": 0.06028408374483127,
+    "rule_of_three": null
+   },
+   "unknown_gender_pseudonyms": 65
+  }
+ },
+ "refusals": 0,
+ "max_tokens_hits": 0,
+ "tokens": {
+  "input": 600055,
+  "output": 173291
+ }
+}
+TOTAL                    49429                           229.35
+
+=================== [18:31:59] A6  Cross-judge: Opus 5.5 as the summary judge for the Opus consumer run (typed/opaque)
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)

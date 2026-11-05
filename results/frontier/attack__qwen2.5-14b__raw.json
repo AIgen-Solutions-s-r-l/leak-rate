@@ -1,0 +1,3182 @@
+{
+ "model": "ollama:qwen2.5:14b",
+ "effort": "medium",
+ "n_docs": 100,
+ "attr_recovery": {
+  "gender": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 100,
+   "k": 100,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9630065012310038,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  },
+  "age": {
+   "rate": 0.98,
+   "lo": 0.95,
+   "hi": 1.0,
+   "n": 100,
+   "k": 98,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.9299882086824253,
+   "wilson_hi": 0.9944980324993383,
+   "rule_of_three": null
+  },
+  "city": {
+   "rate": 0.79,
+   "lo": 0.71,
+   "hi": 0.87,
+   "n": 100,
+   "k": 79,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.7002003108844285,
+   "wilson_hi": 0.8583434598295537,
+   "rule_of_three": null
+  },
+  "profession": {
+   "rate": 0.67,
+   "lo": 0.57,
+   "hi": 0.76,
+   "n": 100,
+   "k": 67,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.5730534371634074,
+   "wilson_hi": 0.754368773255134,
+   "rule_of_three": null
+  },
+  "employer": {
+   "rate": 0.92,
+   "lo": 0.84,
+   "hi": 0.98,
+   "n": 50,
+   "k": 46,
+   "clusters": 50,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.8116175297192756,
+   "wilson_hi": 0.9684504861306886,
+   "rule_of_three": null
+  },
+  "nationality": {
+   "rate": 0.47,
+   "lo": 0.38,
+   "hi": 0.57,
+   "n": 100,
+   "k": 47,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.37510817888094034,
+   "wilson_hi": 0.5671114310451995,
+   "rule_of_three": null
+  },
+  "marital_status": {
+   "rate": 0.31,
+   "lo": 0.22,
+   "hi": 0.4,
+   "n": 100,
+   "k": 31,
+   "clusters": 100,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.22779697154852568,
+   "wilson_hi": 0.4062605579836929,
+   "rule_of_three": null
+  },
+  "diagnosis": {
+   "rate": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 25,
+   "k": 25,
+   "clusters": 25,
+   "method": "cluster_bootstrap",
+   "wilson_lo": 0.866807747239609,
+   "wilson_hi": 1.0,
+   "rule_of_three": null
+  }
+ },
+ "attr_claimed": {
+  "gender": 1.0,
+  "age": 0.99,
+  "city": 1.0,
+  "profession": 0.78,
+  "employer": 0.92,
+  "nationality": 0.47,
+  "marital_status": 0.32,
+  "diagnosis": 1.0
+ },
+ "attr_precision": {
+  "gender": 1.0,
+  "age": 0.98989898989899,
+  "city": 0.79,
+  "profession": 0.8589743589743589,
+  "employer": 1.0,
+  "nationality": 1.0,
+  "marital_status": 0.96875,
+  "diagnosis": 1.0
+ },
+ "surname_recovery": {
+  "rate": 1.0,
+  "lo": 1.0,
+  "hi": 1.0,
+  "n": 100,
+  "k": 100,
+  "clusters": 100,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.9630065012310038,
+  "wilson_hi": 1.0,
+  "rule_of_three": null
+ },
+ "first_name_recovery": {
+  "rate": 0.99,
+  "lo": 0.97,
+  "hi": 1.0,
+  "n": 100,
+  "k": 99,
+  "clusters": 100,
+  "method": "cluster_bootstrap",
+  "wilson_lo": 0.9455138032509935,
+  "wilson_hi": 0.9982325679553905,
+  "rule_of_three": null
+ },
+ "pop_k_median": 1.0,
+ "pop_k_p10": 1.0,
+ "pop_k_lt11_share": 0.65,
+ "pop_k_lt100_share": 0.82,
+ "by_domain": {
+  "clinical": {
+   "n": 25,
+   "pop_k_median": 6.965061039249408,
+   "pop_k_lt11_share": 0.56
+  },
+  "financial": {
+   "n": 25,
+   "pop_k_median": 1.0,
+   "pop_k_lt11_share": 0.92
+  },
+  "hr": {
+   "n": 25,
+   "pop_k_median": 1.0,
+   "pop_k_lt11_share": 1.0
+  },
+  "legal": {
+   "n": 25,
+   "pop_k_median": 204.94615679999998,
+   "pop_k_lt11_share": 0.12
+  }
+ },
+ "refusals": 0,
+ "tokens": {
+  "input": 76038,
+  "output": 8605
+ },
+ "per_document": [
+  {
+   "doc_id": "financial_test_00000",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 25,
+    "city": "Mantova",
+    "profession": "impiegato",
+    "employer": "Istituto Vendite Giudiziarie S.r.l.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Rocca",
+    "first_name": "Diego"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00000",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 6.233390780400001,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 51,
+    "city": "Siena",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": "scompenso cardiaco",
+    "surname": "D'ANGELO",
+    "first_name": "Laura"
+   }
+  },
+  {
+   "doc_id": "hr_test_00000",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 32,
+    "city": "Ancona",
+    "profession": "operaio",
+    "employer": "Autotrasporti Veloci",
+    "nationality": "italiana",
+    "marital_status": "coniugato",
+    "diagnosis": null,
+    "surname": "RICCARDI",
+    "first_name": "Oreste"
+   }
+  },
+  {
+   "doc_id": "legal_test_00000",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 612.88326,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 42,
+    "city": "Ancona",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Lombardi",
+    "first_name": "Simone"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00001",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 6.0212994462000005,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 41,
+    "city": "Terni",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": "carcinoma mammario",
+    "surname": "Tedesco",
+    "first_name": "Claudio"
+   }
+  },
+  {
+   "doc_id": "financial_test_00001",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 60,
+    "city": "Bari",
+    "profession": "casalingo",
+    "employer": "Infissi Moderni Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Falcone",
+    "first_name": "Diego"
+   }
+  },
+  {
+   "doc_id": "hr_test_00001",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 22,
+    "city": "Mantova",
+    "profession": "Lavoratore",
+    "employer": "Infissi Moderni Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Valente",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "legal_test_00001",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 545.8561180199999,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 52,
+    "city": "Arezzo",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Sartori",
+    "first_name": "Lorenzo"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00002",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 8.601836,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 79,
+    "city": "Bari",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "artrite reumatoide",
+    "surname": "Massari",
+    "first_name": "Lorenzo"
+   }
+  },
+  {
+   "doc_id": "financial_test_00002",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 54,
+    "city": "Modena",
+    "profession": "operaia",
+    "employer": "Infissi Moderni S.p.A.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Martini",
+    "first_name": "Teresa"
+   }
+  },
+  {
+   "doc_id": "hr_test_00002",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 40,
+    "city": "Modena",
+    "profession": "operaio",
+    "employer": "Infissi Moderni S.r.l.",
+    "nationality": "italiana",
+    "marital_status": "divorziato",
+    "diagnosis": null,
+    "surname": "Pozzi",
+    "first_name": "Simone"
+   }
+  },
+  {
+   "doc_id": "legal_test_00002",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 12.679749600000001,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 33,
+    "city": "Udine",
+    "profession": "insegnante",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Massari",
+    "first_name": "Anna"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00003",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 201.60707221087026,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 75,
+    "city": "Latina",
+    "profession": "operaia",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "nubile",
+    "diagnosis": "carcinoma mammario",
+    "surname": "Pozzi",
+    "first_name": "Marta"
+   }
+  },
+  {
+   "doc_id": "financial_test_00003",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 758.16849673152,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 43,
+    "city": "Bari",
+    "profession": null,
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": "MORETTI",
+    "first_name": "Rossella"
+   }
+  },
+  {
+   "doc_id": "hr_test_00003",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 27,
+    "city": "Catania",
+    "profession": "Non specificato, ma lavora nel settore edilizio (5° livello CCNL Edilizia)",
+    "employer": "Palestra Fitness Club S.n.c.",
+    "nationality": "Italiano",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Marino",
+    "first_name": "Claudio"
+   }
+  },
+  {
+   "doc_id": "legal_test_00003",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 351.92774399999996,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 48,
+    "city": "Reggio Calabria",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Rocca",
+    "first_name": "Rossella"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00004",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 62.552551392000005,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 77,
+    "city": "Bari",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": "Ipotiroidismo",
+    "surname": "LOMBARDI",
+    "first_name": "Oreste"
+   }
+  },
+  {
+   "doc_id": "financial_test_00004",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 32,
+    "city": "Udine",
+    "profession": "pensionato",
+    "employer": "Hotel Belvedere S.r.l.s.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Marino",
+    "first_name": "Renato"
+   }
+  },
+  {
+   "doc_id": "hr_test_00004",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 34,
+    "city": "Bari",
+    "profession": "Non specificata, ma lavora nell'azienda di trasporti",
+    "employer": "Autotrasporti Veloci S.a.s.",
+    "nationality": "italiana",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": "Rizzi",
+    "first_name": "Marta"
+   }
+  },
+  {
+   "doc_id": "legal_test_00004",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 221.5074624,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 19,
+    "city": "Terni",
+    "profession": "pensionata",
+    "employer": "Istituto Vendite Giudiziarie Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Lombardi",
+    "first_name": "Rossella"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00005",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 1.0590384492,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 74,
+    "city": "Terni",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": "infezione da HIV",
+    "surname": "Greco",
+    "first_name": "Alberto"
+   }
+  },
+  {
+   "doc_id": "financial_test_00005",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 77,
+    "city": "Catania",
+    "profession": "magazziniere",
+    "employer": "Hotel Belvedere S.n.c.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Grasso",
+    "first_name": "Alberto"
+   }
+  },
+  {
+   "doc_id": "hr_test_00005",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 20,
+    "city": "Catania",
+    "profession": "Conducente di autotrasporti",
+    "employer": "Autotrasporti Veloci",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Moretti",
+    "first_name": "Giacomo"
+   }
+  },
+  {
+   "doc_id": "legal_test_00005",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 204.94615679999998,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 37,
+    "city": "Ancona",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Tedesco",
+    "first_name": "Teresa"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00006",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 6.965061039249408,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 34,
+    "city": "Bari",
+    "profession": "pensionato",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "coniugato",
+    "diagnosis": "gastrite erosiva",
+    "surname": "Carbone",
+    "first_name": "Michele"
+   }
+  },
+  {
+   "doc_id": "financial_test_00006",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 80.89947599999999,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 74,
+    "city": "Bari",
+    "profession": "studentessa",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Rizzi",
+    "first_name": "Alessandra"
+   }
+  },
+  {
+   "doc_id": "hr_test_00006",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 53,
+    "city": "Catania",
+    "profession": "impiegata",
+    "employer": "Istituto Vendite Giudiziarie S.r.l.",
+    "nationality": "italiana",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": "Carbone",
+    "first_name": "Anna"
+   }
+  },
+  {
+   "doc_id": "legal_test_00006",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 692.21082,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 41,
+    "city": "Terni",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Valente",
+    "first_name": "Antonella"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00007",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 21.64973139700024,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 45,
+    "city": "Terni",
+    "profession": "disoccupato",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "coniugato",
+    "diagnosis": "ictus ischemico",
+    "surname": "Riccardi",
+    "first_name": "Franco"
+   }
+  },
+  {
+   "doc_id": "financial_test_00007",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 27,
+    "city": "Siena",
+    "profession": "dipendente",
+    "employer": "Studio Dentistico Sorriso S.p.A.",
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Pozzi",
+    "first_name": "Antonella"
+   }
+  },
+  {
+   "doc_id": "hr_test_00007",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 37,
+    "city": "Terni",
+    "profession": "insegnante",
+    "employer": "Istituto Vendite Giudiziarie S.n.c.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Valentini",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "legal_test_00007",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 96.90951480000001,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 39,
+    "city": "Terni",
+    "profession": "impiegata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Lombardi",
+    "first_name": "Teresa"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00008",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 22.186181232356397,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 63,
+    "city": "Catania",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": "celibe",
+    "diagnosis": "insufficienza renale cronica stadio 3",
+    "surname": "Fiore",
+    "first_name": "Michele"
+   }
+  },
+  {
+   "doc_id": "financial_test_00008",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 49,
+    "city": "Terni",
+    "profession": "pensionata",
+    "employer": "Hotel Belvedere S.r.l.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Negri",
+    "first_name": "Antonella"
+   }
+  },
+  {
+   "doc_id": "hr_test_00008",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 36,
+    "city": "Reggio Calabria",
+    "profession": "dipendente",
+    "employer": "Istituto Vendite Giudiziarie S.a.s.",
+    "nationality": "italiana",
+    "marital_status": "divorziato",
+    "diagnosis": null,
+    "surname": "Rocca",
+    "first_name": "Tommaso"
+   }
+  },
+  {
+   "doc_id": "legal_test_00008",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 79.21311,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 74,
+    "city": "Arezzo",
+    "profession": "operaio",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Carbone",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00009",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 70,
+    "city": "Modena",
+    "profession": "studente",
+    "employer": null,
+    "nationality": "rumena",
+    "marital_status": "separato",
+    "diagnosis": "episodio depressivo maggiore",
+    "surname": "Monti",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "financial_test_00009",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 78,
+    "city": "Udine",
+    "profession": "studentessa",
+    "employer": "Infissi Moderni S.r.l.s.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "D'Angelo",
+    "first_name": "Noemi"
+   }
+  },
+  {
+   "doc_id": "hr_test_00009",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 52,
+    "city": "Terni",
+    "profession": "ingegnera",
+    "employer": "Cooperativa Sociale Il Faro Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Valente",
+    "first_name": "Noemi"
+   }
+  },
+  {
+   "doc_id": "legal_test_00009",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 834.53454,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 48,
+    "city": "Ferrara",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Damico",
+    "first_name": "Noemi"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00010",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 53.41021056,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 40,
+    "city": "Ferrara",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": "diabete mellito di tipo 2",
+    "surname": "Valentini",
+    "first_name": "Marta"
+   }
+  },
+  {
+   "doc_id": "financial_test_00010",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 75,
+    "city": "Siena",
+    "profession": "pensionato",
+    "employer": "Autotrasporti Veloci S.a.s.",
+    "nationality": "italiana",
+    "marital_status": "coniugato",
+    "diagnosis": null,
+    "surname": "D'ANGELO",
+    "first_name": "Lorenzo"
+   }
+  },
+  {
+   "doc_id": "hr_test_00010",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 64,
+    "city": "Udine",
+    "profession": "Non specificato, ma lavora per Palestra Fitness Club S.r.l.",
+    "employer": "Palestra Fitness Club S.r.l.",
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Martini",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "legal_test_00010",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 538.9758,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 78,
+    "city": "Ancona",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Giuliani",
+    "first_name": "Giacomo"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00011",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 38.2087654818805,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 58,
+    "city": "Reggio Calabria",
+    "profession": "imprenditrice",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "nubile",
+    "diagnosis": "celiachia",
+    "surname": "Negri",
+    "first_name": "Alessandra"
+   }
+  },
+  {
+   "doc_id": "financial_test_00011",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 23,
+    "city": "Modena",
+    "profession": "magazziniera",
+    "employer": "Autotrasporti Veloci S.r.l.s.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Fiore",
+    "first_name": "Antonella"
+   }
+  },
+  {
+   "doc_id": "hr_test_00011",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 77,
+    "city": "Ferrara",
+    "profession": "pensionata",
+    "employer": "Autotrasporti Veloci Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Carbone",
+    "first_name": "Laura"
+   }
+  },
+  {
+   "doc_id": "legal_test_00011",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 7.607849760000001,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 30,
+    "city": "Udine",
+    "profession": "addetta alle pulizie",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Massari",
+    "first_name": "Viola"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00012",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 115.67036879999999,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 43,
+    "city": "Catania",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": "coniugata",
+    "diagnosis": "sindrome ansioso-depressiva",
+    "surname": "Martino",
+    "first_name": "Laura"
+   }
+  },
+  {
+   "doc_id": "financial_test_00012",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 81,
+    "city": "Arezzo",
+    "profession": "pensionato",
+    "employer": "Infissi Moderni S.r.l.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "D'Angelo",
+    "first_name": "Michele"
+   }
+  },
+  {
+   "doc_id": "hr_test_00012",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 29,
+    "city": "Reggio Calabria",
+    "profession": "Logistica",
+    "employer": "Studio Dentistico Sorriso Soc. Coop.",
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Greco",
+    "first_name": "Simone"
+   }
+  },
+  {
+   "doc_id": "legal_test_00012",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 30251.2,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": null,
+    "city": "Modena",
+    "profession": "pensionata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Martini",
+    "first_name": "RosSELLa"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00013",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 3.142473903,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 69,
+    "city": "Latina",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiano",
+    "marital_status": null,
+    "diagnosis": "carcinoma del colon",
+    "surname": "RIZZI",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "financial_test_00013",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 58,
+    "city": "Udine",
+    "profession": "impiegata",
+    "employer": "Agrifood Italia S.p.A.",
+    "nationality": "italiana",
+    "marital_status": "nubile",
+    "diagnosis": null,
+    "surname": "LEONE",
+    "first_name": "Rossella"
+   }
+  },
+  {
+   "doc_id": "hr_test_00013",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 57,
+    "city": "Bari",
+    "profession": "addetta alle pulizie",
+    "employer": "Palestra Fitness Club S.r.l.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Leone",
+    "first_name": "Alessandra"
+   }
+  },
+  {
+   "doc_id": "legal_test_00013",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 95.098122,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 57,
+    "city": "Udine",
+    "profession": "operaia",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Valentini",
+    "first_name": "Teresa"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00014",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 88.26267705040104,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 80,
+    "city": "Mantova",
+    "profession": "pensionato",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "coniugato",
+    "diagnosis": "polmonite comunitaria",
+    "surname": "Rizzi",
+    "first_name": "Michele"
+   }
+  },
+  {
+   "doc_id": "financial_test_00014",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 81,
+    "city": "Modena",
+    "profession": "pensionata",
+    "employer": "Cooperativa Sociale Il Faro S.n.c.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Giuliani",
+    "first_name": "Teresa"
+   }
+  },
+  {
+   "doc_id": "hr_test_00014",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 39,
+    "city": "Modena",
+    "profession": "operaio",
+    "employer": "Studio Dentistico Sorriso S.r.l.",
+    "nationality": "italiana",
+    "marital_status": "celibe",
+    "diagnosis": null,
+    "surname": "Moretti",
+    "first_name": "Claudio"
+   }
+  },
+  {
+   "doc_id": "legal_test_00014",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 4.311806400000001,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 72,
+    "city": "Ancona",
+    "profession": "cameriere",
+    "employer": "Palestra Fitness Club S.r.l.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Battaglia",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00015",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 42,
+    "city": "Udine",
+    "profession": "impiegata",
+    "employer": null,
+    "nationality": "rumena",
+    "marital_status": "coniugata",
+    "diagnosis": "ipertensione arteriosa",
+    "surname": "Greco",
+    "first_name": "Laura"
+   }
+  },
+  {
+   "doc_id": "financial_test_00015",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": false,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 74,
+    "city": "Ancona",
+    "profession": "studentessa",
+    "employer": "Autotrasporti Veloci S.r.l.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Rocca",
+    "first_name": null
+   }
+  },
+  {
+   "doc_id": "hr_test_00015",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 40,
+    "city": "Terni",
+    "profession": "impiegato",
+    "employer": "Agrifood Italia S.p.A.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Battaglia",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "legal_test_00015",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": false,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 15335.04,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 38,
+    "city": "Udine",
+    "profession": "pensionato",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Riccardi",
+    "first_name": "Tommaso"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00016",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 41,
+    "city": "Ferrara",
+    "profession": "magazziniera",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "coniugata",
+    "diagnosis": "asma bronchiale",
+    "surname": "Giuliani",
+    "first_name": "Noemi"
+   }
+  },
+  {
+   "doc_id": "financial_test_00016",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 34,
+    "city": "Bari",
+    "profession": "operaio",
+    "employer": "Agrifood Italia S.p.A.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Moretti",
+    "first_name": "Diego"
+   }
+  },
+  {
+   "doc_id": "hr_test_00016",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 68,
+    "city": "Bari",
+    "profession": "Non specificato, ma lavora per Palestra Fitness Club S.r.l.",
+    "employer": "Palestra Fitness Club S.r.l.",
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "FALCONE",
+    "first_name": "Tommaso"
+   }
+  },
+  {
+   "doc_id": "legal_test_00016",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 638.3923362,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 75,
+    "city": "Ferrara",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "D'Angelo",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00017",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 35.65509653376,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 18,
+    "city": "Ancona",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": "diabete mellito di tipo 2",
+    "surname": "ROCCA",
+    "first_name": "Tommaso"
+   }
+  },
+  {
+   "doc_id": "financial_test_00017",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 22,
+    "city": "Mantova",
+    "profession": "artigiana",
+    "employer": "Infissi Moderni S.a.s.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Riccardi",
+    "first_name": "Laura"
+   }
+  },
+  {
+   "doc_id": "hr_test_00017",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 69,
+    "city": "Reggio Calabria",
+    "profession": "Lavoratore nel settore agrifood (7° livello CCNL Edilizia)",
+    "employer": "Agrifood Italia S.r.l.",
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Valente",
+    "first_name": "Diego"
+   }
+  },
+  {
+   "doc_id": "legal_test_00017",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 32.513397,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 72,
+    "city": "Latina",
+    "profession": "studentessa",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "D'ANGELO",
+    "first_name": "Sabrina"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00018",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 3.531176429029074,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 62,
+    "city": "Reggio Calabria",
+    "profession": "studente",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "celibe",
+    "diagnosis": "ipertensione arteriosa",
+    "surname": "Valente",
+    "first_name": "Giacomo"
+   }
+  },
+  {
+   "doc_id": "financial_test_00018",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 30,
+    "city": "Udine",
+    "profession": "pensionato",
+    "employer": "Istituto Vendite Giudiziarie S.a.s.",
+    "nationality": "bangladese",
+    "marital_status": "celibe",
+    "diagnosis": null,
+    "surname": "MARTINI",
+    "first_name": "Oreste"
+   }
+  },
+  {
+   "doc_id": "hr_test_00018",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 68,
+    "city": "Terni",
+    "profession": "Lavoratore nel settore edilizio",
+    "employer": "Hotel Belvedere S.n.c.",
+    "nationality": "Italiano",
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Damico",
+    "first_name": "Michele"
+   }
+  },
+  {
+   "doc_id": "legal_test_00018",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 84.0702492,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 43,
+    "city": "Arezzo",
+    "profession": "impiegato",
+    "employer": "Autotrasporti Veloci",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Negri",
+    "first_name": "Giacomo"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00019",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 2.8814730966,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 25,
+    "city": "Udine",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": "carcinoma del colon",
+    "surname": "Valentini",
+    "first_name": "Viola"
+   }
+  },
+  {
+   "doc_id": "financial_test_00019",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 44,
+    "city": "Catania",
+    "profession": "studentessa",
+    "employer": "Agrifood Italia Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Tedesco",
+    "first_name": "Teresa"
+   }
+  },
+  {
+   "doc_id": "hr_test_00019",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 34,
+    "city": "Udine",
+    "profession": "cameriera",
+    "employer": "Palestra Fitness Club",
+    "nationality": "italiana",
+    "marital_status": "nubile",
+    "diagnosis": null,
+    "surname": "Fiore",
+    "first_name": "Alessandra"
+   }
+  },
+  {
+   "doc_id": "legal_test_00019",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 633.98748,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 18,
+    "city": "Udine",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Grasso",
+    "first_name": "Claudia"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00020",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 63,
+    "city": "Udine",
+    "profession": "pensionato",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "vedovo",
+    "diagnosis": "colecistite acuta litiasica",
+    "surname": "Negri",
+    "first_name": "Giacomo"
+   }
+  },
+  {
+   "doc_id": "financial_test_00020",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 28,
+    "city": "Ancona",
+    "profession": "addetta alle pulizie",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "separata",
+    "diagnosis": null,
+    "surname": "NEGRI",
+    "first_name": "Marta"
+   }
+  },
+  {
+   "doc_id": "hr_test_00020",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 29,
+    "city": "Modena",
+    "profession": "barista",
+    "employer": "Infissi Moderni Soc. Coop.",
+    "nationality": "italiana",
+    "marital_status": "coniugato",
+    "diagnosis": null,
+    "surname": "BRUNI",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "legal_test_00020",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 45.935290800000004,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 34,
+    "city": "Siena",
+    "profession": "impiegato",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Pozzi",
+    "first_name": "Claudio"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00021",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": true,
+    "marital_status": false,
+    "diagnosis": true
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 83,
+    "city": "Ferrara",
+    "profession": null,
+    "employer": null,
+    "nationality": "Italiana",
+    "marital_status": null,
+    "diagnosis": "ictus ischemico",
+    "surname": "Leone",
+    "first_name": "Claudia"
+   }
+  },
+  {
+   "doc_id": "financial_test_00021",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 45,
+    "city": "Terni",
+    "profession": "operaia",
+    "employer": "Agrifood Italia Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Moretti",
+    "first_name": "Viola"
+   }
+  },
+  {
+   "doc_id": "hr_test_00021",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 45,
+    "city": "Ancona",
+    "profession": "pensionata",
+    "employer": "Istituto Vendite Giudiziarie S.r.l.",
+    "nationality": "italiana",
+    "marital_status": "vedova",
+    "diagnosis": null,
+    "surname": "Pozzi",
+    "first_name": "Anna"
+   }
+  },
+  {
+   "doc_id": "legal_test_00021",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 202.87599360000002,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 37,
+    "city": "Udine",
+    "profession": "pensionata",
+    "employer": "Autotrasporti Veloci",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Rocca",
+    "first_name": "Rossella"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00022",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 204.75711036317327,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 60,
+    "city": "Udine",
+    "profession": "impiegato",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "celibe",
+    "diagnosis": "disturbo bipolare",
+    "surname": "Monti",
+    "first_name": "Tommaso"
+   }
+  },
+  {
+   "doc_id": "financial_test_00022",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 60,
+    "city": "Bari",
+    "profession": "impiegata",
+    "employer": "Infissi Moderni Soc. Coop.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Greco",
+    "first_name": "Laura"
+   }
+  },
+  {
+   "doc_id": "hr_test_00022",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 70,
+    "city": "Modena",
+    "profession": null,
+    "employer": "Infissi Moderni S.p.A.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "RIZZI",
+    "first_name": "Anna"
+   }
+  },
+  {
+   "doc_id": "legal_test_00022",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 3.8039248800000003,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 33,
+    "city": "Mantova",
+    "profession": "addetta alle pulizie",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Riccardi",
+    "first_name": "Anna"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00023",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": false,
+    "employer": false,
+    "nationality": false,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 21.1311004716,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 38,
+    "city": "Ferrara",
+    "profession": null,
+    "employer": null,
+    "nationality": null,
+    "marital_status": "celibe",
+    "diagnosis": "asma bronchiale",
+    "surname": "Pozzi",
+    "first_name": "Renato"
+   }
+  },
+  {
+   "doc_id": "financial_test_00023",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.4347593751680001,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 72,
+    "city": "Reggio Calabria",
+    "profession": "cassiera",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": "POZZI",
+    "first_name": "Alessandra"
+   }
+  },
+  {
+   "doc_id": "hr_test_00023",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 17,
+    "city": "Arezzo",
+    "profession": "idraulica",
+    "employer": "Agrifood Italia Soc. Coop.",
+    "nationality": "italiana",
+    "marital_status": "separata",
+    "diagnosis": null,
+    "surname": "LEONE",
+    "first_name": "Claudia"
+   }
+  },
+  {
+   "doc_id": "legal_test_00023",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 276.726078,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "m",
+    "age": 30,
+    "city": "Catania",
+    "profession": "operaio",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Valentini",
+    "first_name": "Edoardo"
+   }
+  },
+  {
+   "doc_id": "clinical_test_00024",
+   "domain": "clinical",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": false,
+    "profession": true,
+    "employer": false,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": true
+   },
+   "k_hat": 1.0423222780970158,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 69,
+    "city": "Arezzo",
+    "profession": "studentessa",
+    "employer": null,
+    "nationality": "italiana",
+    "marital_status": "divorziata",
+    "diagnosis": "frattura del collo del femore",
+    "surname": "Valentini",
+    "first_name": "Viola"
+   }
+  },
+  {
+   "doc_id": "financial_test_00024",
+   "domain": "financial",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": true,
+    "marital_status": true,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 51,
+    "city": "Arezzo",
+    "profession": "commessa",
+    "employer": "Autotrasporti Veloci S.p.A.",
+    "nationality": "italiana",
+    "marital_status": "coniugata",
+    "diagnosis": null,
+    "surname": "LOMBARDI",
+    "first_name": "Anna"
+   }
+  },
+  {
+   "doc_id": "hr_test_00024",
+   "domain": "hr",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": true,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 1.0,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 21,
+    "city": "Udine",
+    "profession": "pensionata",
+    "employer": "Studio Dentistico Sorriso S.n.c.",
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Marino",
+    "first_name": "Laura"
+   }
+  },
+  {
+   "doc_id": "legal_test_00024",
+   "domain": "legal",
+   "correct": {
+    "gender": true,
+    "age": true,
+    "city": true,
+    "profession": true,
+    "employer": false,
+    "nationality": false,
+    "marital_status": false,
+    "diagnosis": false
+   },
+   "k_hat": 88.75824720000001,
+   "surname_recovered": true,
+   "first_name_recovered": true,
+   "stop_reason": "stop",
+   "pred": {
+    "gender": "f",
+    "age": 47,
+    "city": "Udine",
+    "profession": "impiegata",
+    "employer": null,
+    "nationality": null,
+    "marital_status": null,
+    "diagnosis": null,
+    "surname": "Martini",
+    "first_name": "Noemi"
+   }
+  }
+ ],
+ "pseudo": "raw",
+ "system": "raw"
+}

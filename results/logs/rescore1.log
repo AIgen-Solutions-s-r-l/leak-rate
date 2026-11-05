@@ -1,0 +1,12 @@
+attack raw rescored
+attack typed rescored
+attack opaque rescored
+attack direct_only rescored
+attack all rescored
+attack oracle rescored
+attack sonnet rescored
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+downstream sonnet-5-5 rescored
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+downstream haiku-5-5 rescored
+EXIT=0

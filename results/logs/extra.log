@@ -1,0 +1,254 @@
+
+=================== [19:00:06] C1  re-score every consumer run from the cache (current scorers)
+12000 frontier calls for 400 docs x 6 conditions (cached calls are free); ~4,438,750 input tokens (+ judge: 4000 calls)
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+4000 frontier calls for 400 docs x 2 conditions (cached calls are free); ~1,419,554 input tokens (+ judge: 0 calls)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\__main__.py", line 3, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 381, in main
+    a.fn(a)
+    ~~~~^^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 230, in cmd_downstream
+    records = runner.run(jobs)
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 107, in run
+    text, stop, ti, to = fut.result()
+                         ~~~~~~~~~~^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 94, in _one
+    resp = _with_backoff(lambda: self.client.messages.create(model=self.model, max_tokens=4000, output_config={"effort": self.effort},
+                                                             messages=[{"role": "user", "content": prompt}]))
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 66, in _with_backoff
+    return fn()
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 94, in <lambda>
+    resp = _with_backoff(lambda: self.client.messages.create(model=self.model, max_tokens=4000, output_config={"effort": self.effort},
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                             messages=[{"role": "user", "content": prompt}]))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_utils\_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\resources\messages\messages.py", line 1325, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_base_client.py", line 1679, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_base_client.py", line 1230, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_base_client.py", line 1333, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgkDzCXHzNuNvfgKuEhq4'}
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+1000 frontier calls for 100 docs x 2 conditions (cached calls are free); ~352,365 input tokens (+ judge: 0 calls)
+1000 frontier calls for 100 docs x 2 conditions (cached calls are free); ~352,365 input tokens (+ judge: 0 calls)
+4000 frontier calls for 400 docs x 2 conditions (cached calls are free); ~1,419,554 input tokens (+ judge: 0 calls)
+6000 frontier calls for 400 docs x 3 conditions (cached calls are free); ~2,193,213 input tokens (+ judge: 1600 calls)
+
+=================== [19:06:59] C2  LLM-judged agreement (Sonnet 5.5 judge) on the summaries of every consumer run
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\__main__.py", line 3, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 381, in main
+    a.fn(a)
+    ~~~~^^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\cli.py", line 286, in cmd_agreement_judge
+    rep, jrec = run_agreement_judge([docs[i] for i in ids], records, mappings, list(conds), model=a.model, effort=a.effort,
+                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                    workers=a.workers, salt=a.run_tag, B=a.B)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\agreement_judge.py", line 104, in run_agreement_judge
+    jrec = runner.run([{k: v for k, v in j.items() if k != "_table"} for j in all_jobs])
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 107, in run
+    text, stop, ti, to = fut.result()
+                         ~~~~~~~~~~^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 94, in _one
+    resp = _with_backoff(lambda: self.client.messages.create(model=self.model, max_tokens=4000, output_config={"effort": self.effort},
+                                                             messages=[{"role": "user", "content": prompt}]))
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 66, in _with_backoff
+    return fn()
+  File "C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\leakrate\eval\downstream.py", line 94, in <lambda>
+    resp = _with_backoff(lambda: self.client.messages.create(model=self.model, max_tokens=4000, output_config={"effort": self.effort},
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                             messages=[{"role": "user", "content": prompt}]))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_utils\_utils.py", line 294, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\resources\messages\messages.py", line 1325, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_base_client.py", line 1679, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_base_client.py", line 1230, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rocch\.venvs\leakrate\Lib\site-packages\anthropic\_base_client.py", line 1333, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgkE697KRfzzR6LbYsuJQ'}
+
+=================== [19:07:21] C3  tables
+# Leak-rate results (test split)
+
+| system | mode | policy | N | doc leak rate % [95% CI] | incl. partial % | direct-mention leak % | over-redaction /1k tok | pop. k̂ median | share k̂<11 | corpus-unique |
+|---|---|---|---|---|---|---|---|---|---|---|
+| finetuned+regex | typed | direct+org+loc | 400 | 0.0 [0.0, 0.0] | 0.2 [0.0, 0.8] | 0.0 [0.0, 0.0] | 1.4 | 35,059 | 2% | 72% |
+| finetuned+regex | typed | direct_only | 400 | 0.0 [0.0, 0.0] | 0.5 [0.0, 1.2] | 0.0 [0.0, 0.0] | 0.5 | 19 | 46% | 90% |
+| finetuned | typed | direct+org+loc | 400 | 0.0 [0.0, 0.0] | 0.2 [0.0, 0.8] | 0.0 [0.0, 0.0] | 1.4 | 35,059 | 2% | 72% |
+| gliner+regex | typed | direct+org+loc | 400 | 93.8 [91.5, 96.0] | 94.0 [91.8, 96.2] | 18.8 [17.8, 19.7] | 3.9 | 19,123 | 12% | 75% |
+| gliner+regex | typed | direct_only | 400 | 93.8 [91.5, 96.0] | 94.0 [91.8, 96.2] | 18.8 [17.8, 19.7] | 3.1 | 20 | 41% | 89% |
+| gliner | typed | direct+org+loc | 400 | 96.5 [94.5, 98.2] | 96.8 [95.0, 98.2] | 41.0 [39.5, 42.5] | 3.9 | 16,786 | 12% | 78% |
+| identity | typed | direct+org+loc | 400 | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 0.0 | 1 | 62% | 99% |
+| llm_self-haiku-5-5-low | typed | direct+org+loc | 400 | 0.2 [0.0, 0.8] | 0.5 [0.0, 1.2] | 0.0 [0.0, 0.1] | 4.7 | 35,059 | 2% | 73% |
+| llm_self-opus-5-5-low | typed | direct+org+loc | 400 | 0.0 [0.0, 0.0] | 0.2 [0.0, 0.8] | 0.0 [0.0, 0.0] | 0.3 | 35,059 | 2% | 72% |
+| llm_self-opus-5-5-medium | typed | direct+org+loc | 400 | 0.0 [0.0, 0.0] | 0.2 [0.0, 0.8] | 0.0 [0.0, 0.0] | 1.6 | 35,059 | 2% | 72% |
+| llm_self-sonnet-5-5-low | typed | direct+org+loc | 400 | 0.0 [0.0, 0.0] | 0.2 [0.0, 0.8] | 0.0 [0.0, 0.0] | 4.2 | 35,059 | 2% | 72% |
+| oracle | typed | direct+org+loc | 400 | 0.0 [0.0, 0.0] | 0.2 [0.0, 0.8] | 0.0 [0.0, 0.0] | 0.0 | 35,059 | 2% | 72% |
+| presidio+regex | opaque | direct+org+loc | 400 | 41.2 [36.5, 46.2] | 51.5 [46.8, 56.5] | 7.1 [6.1, 8.2] | 15.9 | 10,636 | 12% | 79% |
+| presidio+regex | typed | all | 400 | 41.2 [36.5, 46.2] | 51.2 [46.5, 56.2] | 7.1 [6.1, 8.2] | 15.9 | 10,636 | 12% | 78% |
+| presidio+regex | typed | direct+org+loc | 400 | 41.2 [36.5, 46.2] | 51.2 [46.5, 56.2] | 7.1 [6.1, 8.2] | 15.9 | 10,636 | 12% | 79% |
+| presidio+regex | typed | direct_only | 400 | 54.0 [49.0, 58.8] | 61.3 [56.2, 65.8] | 10.3 [9.1, 11.5] | 3.5 | 19 | 44% | 90% |
+| presidio | typed | direct+org+loc | 400 | 64.2 [59.8, 68.8] | 71.8 [67.2, 76.0] | 11.7 [10.5, 13.0] | 15.9 | 10,072 | 12% | 82% |
+| regex | typed | direct+org+loc | 400 | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 39.6 [38.6, 40.7] | 0.0 | 19 | 46% | 90% |
+
+## Per-category strict leak rate % [95% cluster-bootstrap CI]
+
+| system (mode) | ADDRESS | CF | DATE_BIRTH | DOC_ID | EMAIL | IBAN | PER | PHONE | PIVA | PLATE | AGE | DATE | HEALTH | LOC | ORG | PROFESSION |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| finetuned+regex (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] |
+| finetuned+regex (typed, direct_only) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+| finetuned (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] |
+| gliner+regex (typed, direct+org+loc) | 0.5 [0.1, 1.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 47.7 [45.6, 49.9] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 98.0 [96.4, 99.4] | 99.9 [99.7, 100.0] | 100.0 [100.0, 100.0] | 16.6 [14.4, 18.9] | 24.9 [19.9, 29.9] | 95.5 [92.9, 97.6] |
+| gliner+regex (typed, direct_only) | 0.5 [0.1, 1.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 47.7 [45.6, 49.9] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 98.0 [96.4, 99.4] | 99.9 [99.7, 100.0] | 100.0 [100.0, 100.0] | 82.3 [79.7, 84.9] | 100.0 [100.0, 100.0] | 95.5 [92.9, 97.6] |
+| gliner (typed, direct+org+loc) | 7.4 [5.6, 9.3] | 66.6 [61.3, 71.8] | 19.4 [14.4, 24.7] | 100.0 [100.0, 100.0] | 70.7 [65.0, 75.8] | 1.2 [0.0, 2.7] | 47.9 [45.8, 50.1] | 44.2 [38.3, 50.1] | 12.0 [6.0, 18.8] | 0.0 [0.0, 0.0] | 98.0 [96.4, 99.4] | 99.9 [99.7, 100.0] | 100.0 [100.0, 100.0] | 16.6 [14.4, 18.9] | 24.9 [19.9, 29.9] | 95.5 [92.9, 97.6] |
+| identity (typed, direct+org+loc) | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+| llm_self-haiku-5-5-low (typed, direct+org+loc) | 0.1 [0.0, 0.4] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 7.9 [6.0, 9.9] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] |
+| llm_self-opus-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 0.3 [0.0, 0.8] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] |
+| llm_self-opus-5-5-medium (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] |
+| llm_self-sonnet-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 0.2 [0.0, 0.6] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] |
+| oracle (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] |
+| presidio+regex (opaque, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 18.2 [15.7, 20.8] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 92.1 [90.3, 93.8] | 94.2 [91.4, 96.7] | 25.2 [22.4, 27.9] | 25.6 [20.8, 30.6] | 100.0 [100.0, 100.0] |
+| presidio+regex (typed, all) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 18.2 [15.7, 20.8] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 0.0 [0.0, 0.0] | 94.2 [91.4, 96.7] | 25.2 [22.4, 27.9] | 25.0 [20.2, 30.0] | 100.0 [100.0, 100.0] |
+| presidio+regex (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 18.2 [15.7, 20.8] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 92.1 [90.3, 93.8] | 94.2 [91.4, 96.7] | 25.2 [22.4, 27.9] | 25.0 [20.2, 30.0] | 100.0 [100.0, 100.0] |
+| presidio+regex (typed, direct_only) | 2.3 [1.2, 3.6] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 25.3 [22.5, 28.1] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 92.4 [90.6, 94.0] | 99.2 [97.8, 100.0] | 99.9 [99.8, 100.0] | 90.4 [87.3, 93.2] | 100.0 [100.0, 100.0] |
+| presidio (typed, direct+org+loc) | 13.1 [10.8, 15.7] | 0.0 [0.0, 0.0] | 14.1 [10.0, 18.6] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 17.5 [15.1, 20.1] | 8.7 [5.5, 11.7] | 27.0 [18.6, 35.9] | 90.0 [78.6, 100.0] | 100.0 [100.0, 100.0] | 91.9 [90.1, 93.6] | 94.2 [91.4, 96.7] | 21.8 [19.2, 24.4] | 20.4 [15.8, 24.9] | 100.0 [100.0, 100.0] |
+| regex (typed, direct+org+loc) | 2.6 [1.4, 3.9] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+
+## Document leak rate by domain % [95% CI]
+
+| system (mode) | clinical | financial | hr | legal |
+|---|---|---|---|---|
+| finetuned+regex (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| finetuned+regex (typed, direct_only) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| finetuned (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| gliner+regex (typed, direct+org+loc) | 90.0 [84.0, 96.0] | 95.0 [90.0, 99.0] | 100.0 [100.0, 100.0] | 90.0 [84.0, 96.0] |
+| gliner+regex (typed, direct_only) | 90.0 [84.0, 96.0] | 95.0 [90.0, 99.0] | 100.0 [100.0, 100.0] | 90.0 [84.0, 96.0] |
+| gliner (typed, direct+org+loc) | 90.0 [84.0, 96.0] | 96.0 [92.0, 99.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+| identity (typed, direct+org+loc) | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+| llm_self-haiku-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 1.0 [0.0, 3.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| llm_self-opus-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| llm_self-opus-5-5-medium (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| llm_self-sonnet-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| oracle (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| presidio+regex (opaque, direct+org+loc) | 54.0 [45.0, 64.0] | 31.0 [22.0, 40.0] | 53.0 [43.0, 62.0] | 27.0 [19.0, 36.0] |
+| presidio+regex (typed, all) | 54.0 [45.0, 64.0] | 31.0 [22.0, 40.0] | 53.0 [43.0, 62.0] | 27.0 [19.0, 36.0] |
+| presidio+regex (typed, direct+org+loc) | 54.0 [45.0, 64.0] | 31.0 [22.0, 40.0] | 53.0 [43.0, 62.0] | 27.0 [19.0, 36.0] |
+| presidio+regex (typed, direct_only) | 57.0 [48.0, 67.0] | 50.0 [40.0, 60.0] | 70.0 [61.0, 78.0] | 39.0 [30.0, 49.0] |
+| presidio (typed, direct+org+loc) | 85.0 [78.0, 92.0] | 48.0 [38.0, 58.0] | 71.0 [62.0, 79.0] | 53.0 [43.0, 63.0] |
+| regex (typed, direct+org+loc) | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+
+## PER strict leak rate by surface form % [95% CI] (n in header row from the first system)
+
+| system (mode) | first (n=53) | full (n=910) | initial (n=161) | inverted (n=163) | surname (n=295) | upper (n=174) |
+|---|---|---|---|---|---|---|
+| finetuned+regex (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| finetuned+regex (typed, direct_only) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| finetuned (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| gliner+regex (typed, direct+org+loc) | 49.1 [35.6, 62.5] | 40.5 [36.9, 44.3] | 98.8 [96.8, 100.0] | 25.8 [19.2, 32.9] | 82.0 [77.1, 86.8] | 0.0 [0.0, 0.0] |
+| gliner+regex (typed, direct_only) | 49.1 [35.6, 62.5] | 40.5 [36.9, 44.3] | 98.8 [96.8, 100.0] | 25.8 [19.2, 32.9] | 82.0 [77.1, 86.8] | 0.0 [0.0, 0.0] |
+| gliner (typed, direct+org+loc) | 52.8 [39.5, 65.9] | 40.5 [36.9, 44.3] | 98.8 [96.8, 100.0] | 25.8 [19.2, 32.9] | 82.7 [77.9, 87.3] | 0.0 [0.0, 0.0] |
+| identity (typed, direct+org+loc) | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+| llm_self-haiku-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| llm_self-opus-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| llm_self-opus-5-5-medium (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| llm_self-sonnet-5-5-low (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| oracle (typed, direct+org+loc) | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] | 0.0 [0.0, 0.0] |
+| presidio+regex (opaque, direct+org+loc) | 18.9 [8.9, 30.0] | 10.9 [8.7, 13.3] | 3.1 [0.6, 6.2] | 20.9 [13.7, 28.0] | 38.6 [32.3, 45.2] | 32.8 [25.7, 40.5] |
+| presidio+regex (typed, all) | 18.9 [8.9, 30.0] | 10.9 [8.7, 13.3] | 3.1 [0.6, 6.2] | 20.9 [13.7, 28.0] | 38.6 [32.3, 45.2] | 32.8 [25.7, 40.5] |
+| presidio+regex (typed, direct+org+loc) | 18.9 [8.9, 30.0] | 10.9 [8.7, 13.3] | 3.1 [0.6, 6.2] | 20.9 [13.7, 28.0] | 38.6 [32.3, 45.2] | 32.8 [25.7, 40.5] |
+| presidio+regex (typed, direct_only) | 26.4 [14.3, 38.8] | 14.0 [11.5, 16.7] | 4.3 [1.4, 8.0] | 24.5 [17.0, 32.3] | 50.5 [43.6, 57.0] | 61.5 [53.4, 69.5] |
+| presidio (typed, direct+org+loc) | 17.0 [7.8, 28.0] | 10.8 [8.6, 13.2] | 3.1 [0.6, 6.2] | 16.0 [9.9, 22.5] | 38.3 [31.9, 44.9] | 32.2 [25.0, 39.9] |
+| regex (typed, direct+org+loc) | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] | 100.0 [100.0, 100.0] |
+
+## Quasi-identifier survival (share of documents) and k-anonymity
+
+| system (mode) | gender | age | city | profession | employer | nationality | marital_status | diagnosis | corpus k median | corpus unique | k̂ median | k̂ p10 | k̂<5 | k̂<11 | k̂<100 | l=1 (clinical) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| finetuned+regex (typed, direct+org+loc) | 100% | 69% | 0% | 67% | 0% | 0% | 22% | 25% | 1 | 72% | 35,059 | 367 | 1% | 2% | 5% | 83% |
+| finetuned+regex (typed, direct_only) | 100% | 69% | 88% | 67% | 45% | 26% | 22% | 25% | 1 | 90% | 19 | 1 | 42% | 46% | 75% | 100% |
+| finetuned (typed, direct+org+loc) | 100% | 69% | 0% | 67% | 0% | 0% | 22% | 25% | 1 | 72% | 35,059 | 367 | 1% | 2% | 5% | 83% |
+| gliner+regex (typed, direct+org+loc) | 100% | 68% | 9% | 63% | 10% | 26% | 22% | 25% | 1 | 75% | 19,123 | 5 | 10% | 12% | 20% | 82% |
+| gliner+regex (typed, direct_only) | 100% | 68% | 54% | 63% | 45% | 26% | 22% | 25% | 1 | 89% | 20 | 1 | 38% | 41% | 68% | 98% |
+| gliner (typed, direct+org+loc) | 100% | 74% | 9% | 63% | 10% | 26% | 22% | 25% | 1 | 78% | 16,786 | 3 | 10% | 12% | 20% | 83% |
+| identity (typed, direct+org+loc) | 100% | 100% | 88% | 67% | 45% | 26% | 22% | 25% | 1 | 99% | 1 | 1 | 56% | 62% | 78% | 100% |
+| llm_self-haiku-5-5-low (typed, direct+org+loc) | 100% | 69% | 2% | 67% | 0% | 0% | 20% | 25% | 1 | 73% | 35,059 | 367 | 0% | 2% | 5% | 84% |
+| llm_self-opus-5-5-low (typed, direct+org+loc) | 100% | 69% | 0% | 67% | 0% | 0% | 22% | 25% | 1 | 72% | 35,059 | 367 | 1% | 2% | 5% | 83% |
+| llm_self-opus-5-5-medium (typed, direct+org+loc) | 100% | 69% | 0% | 67% | 0% | 0% | 22% | 25% | 1 | 72% | 35,059 | 367 | 1% | 2% | 5% | 83% |
+| llm_self-sonnet-5-5-low (typed, direct+org+loc) | 100% | 69% | 0% | 67% | 0% | 0% | 22% | 25% | 1 | 72% | 35,059 | 367 | 1% | 2% | 5% | 83% |
+| oracle (typed, direct+org+loc) | 100% | 69% | 0% | 67% | 0% | 0% | 22% | 25% | 1 | 72% | 35,059 | 367 | 1% | 2% | 5% | 83% |
+| presidio+regex (opaque, direct+org+loc) | 100% | 69% | 5% | 67% | 15% | 26% | 21% | 25% | 1 | 79% | 10,636 | 2 | 11% | 12% | 22% | 83% |
+| presidio+regex (typed, all) | 100% | 69% | 5% | 67% | 15% | 26% | 21% | 25% | 1 | 78% | 10,636 | 2 | 11% | 12% | 22% | 83% |
+| presidio+regex (typed, direct+org+loc) | 100% | 69% | 5% | 67% | 15% | 26% | 21% | 25% | 1 | 79% | 10,636 | 2 | 11% | 12% | 22% | 83% |
+| presidio+regex (typed, direct_only) | 100% | 69% | 88% | 67% | 42% | 26% | 21% | 25% | 1 | 90% | 19 | 1 | 40% | 44% | 73% | 100% |
+| presidio (typed, direct+org+loc) | 100% | 74% | 4% | 67% | 15% | 26% | 21% | 25% | 1 | 82% | 10,072 | 1 | 11% | 12% | 22% | 83% |
+| regex (typed, direct+org+loc) | 100% | 69% | 88% | 67% | 45% | 26% | 22% | 25% | 1 | 90% | 19 | 1 | 42% | 46% | 75% | 100% |
+
+wrote C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\paper\tables.tex (77 lines)
+wrote C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\paper\tables_frontier.tex (92 lines) and C:\Users\rocch\AppData\Local\Claude-Data\claude_pzs8sxrjxfjjc\scratch-workspaces\80e883d6-f2ae-482d-99a2-065398a6ead9\0dd1bb7b-3f8f-4d02-9928-f6bb9af1cded\scratch-2026-11-05-e44820\results\frontier_summary.md (90 lines)
+unused bib entries: ['ai4privacy2023', 'papadopoulou2022bootstrapping']
+TBD markers: 2
+OK
+model                    calls      in_tok     out_tok      USD
+claude-haiku-5-5          6400   4,125,486   2,055,275     1.44
+claude-opus-5-5          31708  21,786,432   6,269,875   212.54
+claude-sonnet-5-5        19110  19,039,380   2,912,684    67.21
+TOTAL                    57218                           281.19
+EXIT=0

@@ -1,0 +1,39 @@
+{
+  "n_documents": 2000,
+  "seed": 20251105,
+  "n_per_domain": 500,
+  "splits": {
+    "clinical/dev": 50,
+    "clinical/test": 100,
+    "clinical/train": 350,
+    "financial/dev": 50,
+    "financial/test": 100,
+    "financial/train": 350,
+    "hr/dev": 50,
+    "hr/test": 100,
+    "hr/train": 350,
+    "legal/dev": 50,
+    "legal/test": 100,
+    "legal/train": 350
+  },
+  "mentions_per_category": {
+    "ADDRESS": 3761,
+    "AGE": 1577,
+    "CF": 1814,
+    "DATE": 5222,
+    "DATE_BIRTH": 1155,
+    "DOC_ID": 447,
+    "EMAIL": 1814,
+    "HEALTH": 1410,
+    "IBAN": 1655,
+    "LOC": 8995,
+    "ORG": 3468,
+    "PER": 8327,
+    "PHONE": 1508,
+    "PIVA": 500,
+    "PLATE": 182,
+    "PROFESSION": 1884
+  },
+  "mean_tokens": 131.774,
+  "direct_mentions": 21163
+}

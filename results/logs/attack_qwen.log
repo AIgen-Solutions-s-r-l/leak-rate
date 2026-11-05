@@ -1,0 +1,17 @@
+== smoke
+ "n_docs": 4,
+ "surname_recovery": {
+ "refusals": 0,
+
+real	3m3.981s
+user	0m0.341s
+sys	0m0.529s
+financial_test_00000 stop {"gender": "m", "age": 25, "city": "LOC_0004", "profession": "impiegato", "employer": "ORG_0001", "nationality": null, "marital_status": null, "diagnosis": null
+clinical_test_00000 stop {"gender": "f", "age": 51, "city": "LOC_0004", "profession": null, "employer": null, "nationality": null, "marital_status": null, "diagnosis": "scompenso cardia
+hr_test_00000 stop {"gender": "m", "age": 32, "city": "LOC_0002", "profession": "operaio", "employer": "Autotrasporti Veloci", "nationality": "italiana", "marital_status": "coniug
+legal_test_00000 stop {"gender": "m", "age": null, "city": "LOC_0002", "profession": null, "employer": null, "nationality": null, "marital_status": null, "diagnosis": null, "surname"
+== full typed
+typed EXIT=0
+== raw 100
+raw EXIT=0
+oracle EXIT=0

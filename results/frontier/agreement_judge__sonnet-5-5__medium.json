@@ -1,0 +1,51 @@
+{
+ "judge_model": "claude-sonnet-5-5",
+ "effort": "low",
+ "by_condition": {
+  "typed": {
+   "n_docs": 393,
+   "pseudonyms_total": 819,
+   "share_with_agreement": 0.42735042735042733,
+   "pseudonyms_with_agreement": 350,
+   "pseudonyms_inconsistent": 2,
+   "error_rate": {
+    "rate": 0.005714285714285714,
+    "lo": 0.0,
+    "hi": 0.014793996804382554,
+    "n": 350,
+    "k": 2,
+    "clusters": 393,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.0015684645230766413,
+    "wilson_hi": 0.020592474181188064,
+    "rule_of_three": null
+   },
+   "unparsed": 0
+  },
+  "opaque": {
+   "n_docs": 389,
+   "pseudonyms_total": 801,
+   "share_with_agreement": 0.24469413233458176,
+   "pseudonyms_with_agreement": 196,
+   "pseudonyms_inconsistent": 2,
+   "error_rate": {
+    "rate": 0.01020408163265306,
+    "lo": 0.0,
+    "hi": 0.026881720430107527,
+    "n": 196,
+    "k": 2,
+    "clusters": 389,
+    "method": "cluster_bootstrap",
+    "wilson_lo": 0.0028028021471185223,
+    "wilson_hi": 0.036435596757654065,
+    "rule_of_three": null
+   },
+   "unparsed": 0
+  }
+ },
+ "tokens": {
+  "input": 888283,
+  "output": 77547
+ },
+ "records": "results/frontier/downstream__sonnet-5-5__medium.records.jsonl"
+}

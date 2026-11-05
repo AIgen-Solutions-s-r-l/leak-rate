@@ -1,0 +1,20 @@
+{
+ "judge_model": "openai:qwen72b",
+ "prompt": "default",
+ "records": "results/frontier/downstream__opus-5-5__medium.records.jsonl",
+ "n_docs": 400,
+ "judge_vs_raw": {
+  "typed": {
+   "win_rate_vs_raw": 0.663125,
+   "lo": 0.634984375,
+   "hi": 0.6925,
+   "n": 400
+  },
+  "opaque": {
+   "win_rate_vs_raw": 0.6625,
+   "lo": 0.635,
+   "hi": 0.69,
+   "n": 400
+  }
+ }
+}

@@ -1,0 +1,25 @@
+[project]
+name = "leakrate"
+version = "0.1.0"
+description = "Leak Rate, Not Loss: measuring what escapes when a local model pseudonymizes text for frontier LLMs"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "faker>=20"]
+
+[project.optional-dependencies]
+presidio = ["presidio-analyzer>=2.2", "spacy>=3.7"]
+gliner = ["gliner>=0.2", "torch"]
+llm = ["anthropic>=0.40"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+leakrate = "leakrate.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["leakrate*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

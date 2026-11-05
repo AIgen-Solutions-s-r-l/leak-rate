@@ -1,0 +1,26 @@
+== waiting for vLLM at https://qwdykq42927mjd-8000.proxy.runpod.net/v1
+ready after 20s
+{"id":"chatcmpl-946408178a361c36","object":"chat.completion","created":1793917690,"model":"qwen72b","choices":[{"index":0,"message":{"role":"assistant","content":"ok","refusal":null,"annotations":null,"audio":null,"function_call":null,"reasoning":null},"logprobs":null,"finish_reason":"stop","stop_re
+== attacker, 6 conditions
+attack raw done
+attack typed done
+attack opaque done
+attack direct_only done
+attack all done
+attack oracle done
+== completeness-blind judge on the Opus medium run (typed / opaque / oracle)
+judge blind done
+== default-prompt judge with the same model (judge-model comparison), typed / opaque
+judge default done
+attack72 raw          surname 100.0%  k<11 64.2%  median 1
+attack72 typed        surname 33.8%  k<11 12.0%  median 15,342
+attack72 opaque       surname 34.8%  k<11 14.0%  median 9,531
+attack72 direct_only  surname 45.0%  k<11 44.5%  median 20
+attack72 all          surname 33.5%  k<11 12.0%  median 15,342
+attack72 oracle       surname 0.0%  k<11 1.8%  median 45,929
+judge_blind__qwen2.5-72b__opus-medium {'typed': (0.393, 0.369, 0.415, 400), 'opaque': (0.404, 0.381, 0.426, 400), 'oracle': (0.485, 0.463, 0.506, 400)}
+judge_default__qwen2.5-72b__opus-medium {'typed': (0.663, 0.635, 0.693, 400), 'opaque': (0.662, 0.635, 0.69, 400)}
+== done
+== terminating pod qwdykq42927mjd
+
+EXIT=0

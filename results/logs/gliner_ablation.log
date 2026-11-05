@@ -1,0 +1,19 @@
+gliner+regex[en,0.4] mode=typed policy=direct+org+loc: 100 docs in 172.6s -> results/pseudo/ablation_gliner-regex-en-0.4__typed__direct-org-loc__test.jsonl
+system=gliner+regex[en,0.4] mode=typed policy=direct+org+loc N=100
+  doc_leak_rate (any direct identifier survives, strict): 99.0 [97.0, 100.0]%
+  doc_leak_rate incl. partial fragments:                   99.0 [97.0, 100.0]%
+  direct-mention leak rate:                               21.7 [19.9, 23.4]%
+  over-redaction (spurious replacements / 1k tokens):      5.7
+gliner+regex[en,0.25] mode=typed policy=direct+org+loc: 100 docs in 183.3s -> results/pseudo/ablation_gliner-regex-en-0.25__typed__direct-org-loc__test.jsonl
+system=gliner+regex[en,0.25] mode=typed policy=direct+org+loc N=100
+  doc_leak_rate (any direct identifier survives, strict): 85.0 [78.0, 91.0]%
+  doc_leak_rate incl. partial fragments:                   85.0 [78.0, 91.0]%
+  direct-mention leak rate:                               14.1 [12.3, 15.7]%
+  over-redaction (spurious replacements / 1k tokens):      10.1
+gliner+regex[it,0.25] mode=typed policy=direct+org+loc: 100 docs in 219.8s -> results/pseudo/ablation_gliner-regex-it-0.25__typed__direct-org-loc__test.jsonl
+system=gliner+regex[it,0.25] mode=typed policy=direct+org+loc N=100
+  doc_leak_rate (any direct identifier survives, strict): 85.0 [78.0, 91.0]%
+  doc_leak_rate incl. partial fragments:                   86.0 [79.0, 92.0]%
+  direct-mention leak rate:                               14.5 [12.7, 16.2]%
+  over-redaction (spurious replacements / 1k tokens):      6.6
+EXIT=0

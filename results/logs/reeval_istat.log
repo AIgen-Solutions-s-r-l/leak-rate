@@ -1,0 +1,52 @@
+system=finetuned+regex mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=47,287 p10=365 share k̂<11=1.8% k̂<100=6.0%
+system=finetuned+regex mode=typed policy=direct_only N=400
+  k-anonymity: corpus k median=1 unique=90.2%; population k̂ median=16 p10=1 share k̂<11=48.2% k̂<100=73.5%
+system=finetuned mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=47,287 p10=365 share k̂<11=1.8% k̂<100=6.0%
+system=gliner+regex mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=74.8%; population k̂ median=17,699 p10=3 share k̂<11=12.8% k̂<100=21.0%
+system=gliner+regex mode=typed policy=direct_only N=400
+  k-anonymity: corpus k median=1 unique=89.0%; population k̂ median=20 p10=1 share k̂<11=42.8% k̂<100=67.5%
+system=gliner mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=78.5%; population k̂ median=15,088 p10=2 share k̂<11=13.0% k̂<100=21.2%
+system=identity mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=99.0%; population k̂ median=1 p10=1 share k̂<11=63.7% k̂<100=76.5%
+system=llm_self-haiku-5-5-low mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=72.8%; population k̂ median=43,404 p10=365 share k̂<11=1.8% k̂<100=5.8%
+system=llm_self-opus-5-5-low mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=46,940 p10=365 share k̂<11=1.8% k̂<100=6.0%
+system=llm_self-opus-5-5-medium mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=47,287 p10=365 share k̂<11=1.8% k̂<100=6.0%
+system=llm_self-sonnet-5-5-low mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=47,287 p10=365 share k̂<11=1.8% k̂<100=6.0%
+system=oracle mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=72.2%; population k̂ median=47,287 p10=365 share k̂<11=1.8% k̂<100=6.0%
+system=presidio+casenorm+regex mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=79.0%; population k̂ median=11,050 p10=1 share k̂<11=12.5% k̂<100=23.0%
+system=presidio+casenorm+regex mode=typed policy=direct_only N=400
+  k-anonymity: corpus k median=1 unique=90.0%; population k̂ median=20 p10=1 share k̂<11=46.0% k̂<100=71.0%
+system=presidio+casenorm mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=82.0%; population k̂ median=10,837 p10=1 share k̂<11=13.0% k̂<100=22.8%
+system=presidio+regex mode=opaque policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=79.0%; population k̂ median=9,531 p10=1 share k̂<11=12.5% k̂<100=23.0%
+system=presidio+regex mode=typed policy=all N=400
+  k-anonymity: corpus k median=1 unique=78.5%; population k̂ median=9,531 p10=1 share k̂<11=12.5% k̂<100=23.0%
+system=presidio+regex mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=79.0%; population k̂ median=9,531 p10=1 share k̂<11=12.5% k̂<100=23.0%
+system=presidio+regex mode=typed policy=direct_only N=400
+  k-anonymity: corpus k median=1 unique=90.0%; population k̂ median=20 p10=1 share k̂<11=46.8% k̂<100=71.5%
+system=presidio mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=82.0%; population k̂ median=9,531 p10=1 share k̂<11=13.0% k̂<100=22.8%
+system=regex mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=90.2%; population k̂ median=16 p10=1 share k̂<11=48.2% k̂<100=73.5%
+system=wikineural+regex mode=typed policy=direct+org+loc N=400
+  k-anonymity: corpus k median=1 unique=75.5%; population k̂ median=17,699 p10=20 share k̂<11=8.8% k̂<100=16.5%
+attack raw rescored
+attack typed rescored
+attack opaque rescored
+attack direct_only rescored
+attack all rescored
+attack oracle rescored
+attack sonnet rescored
+EXIT=0

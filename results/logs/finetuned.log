@@ -1,0 +1,55 @@
+train docs 1400 -> 2300 windows; dev docs 200 -> 326 windows; labels 33
+[transformers] [1mBertForTokenClassification LOAD REPORT[0m from: dbmdz/bert-base-italian-cased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+bert.pooler.dense.bias                     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+bert.pooler.dense.weight                   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  ep 1 step 20/288 loss 1.8146 256s
+  ep 1 step 40/288 loss 0.9383 530s
+  ep 1 step 60/288 loss 0.2829 813s
+  ep 1 step 80/288 loss 0.0887 1088s
+  ep 1 step 100/288 loss 0.0458 1305s
+  ep 1 step 120/288 loss 0.0336 1585s
+  ep 1 step 140/288 loss 0.0240 1916s
+epoch 1: dev token accuracy 0.9966 (2032s)
+  ep 2 step 160/288 loss 0.0161 2202s
+  ep 2 step 180/288 loss 0.0130 2409s
+  ep 2 step 200/288 loss 0.0114 2622s
+  ep 2 step 220/288 loss 0.0110 2864s
+  ep 2 step 240/288 loss 0.0098 3089s
+  ep 2 step 260/288 loss 0.0106 3282s
+  ep 2 step 280/288 loss 0.0108 3477s
+epoch 2: dev token accuracy 0.9962 (3605s)
+saved to models/finetuned-it
+finetuned+regex mode=typed policy=direct+org+loc: 400 docs in 89.8s -> results/pseudo/finetuned-regex__typed__direct-org-loc__test.jsonl
+finetuned mode=typed policy=direct+org+loc: 400 docs in 84.1s -> results/pseudo/finetuned__typed__direct-org-loc__test.jsonl
+finetuned+regex mode=typed policy=direct_only: 400 docs in 92.4s -> results/pseudo/finetuned-regex__typed__direct_only__test.jsonl
+system=finetuned+regex mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.2 [0.0, 0.8]%
+  direct-mention leak rate:                               0.0 [0.0, 0.0]%
+  over-redaction (spurious replacements / 1k tokens):      1.4
+system=finetuned mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.2 [0.0, 0.8]%
+  direct-mention leak rate:                               0.0 [0.0, 0.0]%
+  over-redaction (spurious replacements / 1k tokens):      1.4
+system=finetuned+regex mode=typed policy=direct_only N=400
+  doc_leak_rate (any direct identifier survives, strict): 0.0 [0.0, 0.0]%
+  doc_leak_rate incl. partial fragments:                   0.5 [0.0, 1.2]%
+  direct-mention leak rate:                               0.0 [0.0, 0.0]%
+  over-redaction (spurious replacements / 1k tokens):      0.5
+EXIT=0

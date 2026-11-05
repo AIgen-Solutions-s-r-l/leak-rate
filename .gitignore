@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+results/cache/
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.pdf
+models/
+.venv-path
+paper/*.synctex.gz
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk

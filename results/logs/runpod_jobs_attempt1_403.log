@@ -1,0 +1,17 @@
+== waiting for vLLM at https://qwdykq42927mjd-8000.proxy.runpod.net/v1
+ready after 360s
+{"id":"chatcmpl-a9007fc857701283","object":"chat.completion","created":1793912245,"model":"qwen72b","choices":[{"index":0,"message":{"role":"assistant","content":"ok","refusal":null,"annotations":null,"audio":null,"function_call":null,"reasoning":null},"logprobs":null,"finish_reason":"stop","stop_re
+== attacker, 6 conditions
+attack raw FAILED
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\urllib\request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+attack typed FAILED
+  File "C:\Users\rocch\AppData\Local\Python\pythoncore-3.14-64\Lib\urllib\request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+attack opaque FAILED
+  [openai-compatible retry 2] HTTPError: HTTP Error 403: Forbidden
+  [openai-compatible retry 2] HTTPError: HTTP Error 403: Forbidden
+  [openai-compatible retry 2] HTTPError: HTTP Error 403: Forbidden
+EXIT=0

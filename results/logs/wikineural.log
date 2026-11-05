@@ -1,0 +1,21 @@
+wikineural+regex mode=typed policy=direct+org+loc: 400 docs in 149.3s -> results/pseudo/wikineural-regex__typed__direct-org-loc__test.jsonl
+wikineural+casenorm+regex mode=typed policy=direct+org+loc: 400 docs in 197.0s -> results/pseudo/wikineural-casenorm-regex__typed__direct-org-loc__test.jsonl
+system=wikineural+regex mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 56.5 [51.2, 61.5]%
+  doc_leak_rate incl. partial fragments:                   64.0 [59.0, 68.8]%
+  direct-mention leak rate:                               11.7 [10.4, 12.8]%
+  over-redaction (spurious replacements / 1k tokens):      4.5
+  category     kind    mentions  strict leak [95% CI]      partial [95% CI]        entity-level
+  ADDRESS      direct       780  0.3 [0.0, 0.7]%          0.3 [0.0, 0.7]%        0.3 [0.0, 0.7]%
+  CF           direct       437  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  DATE_BIRTH   direct       227  0.0 [0.0, 0.0]%          0.4 [0.0, 1.4]%        0.0 [0.0, 0.0]%
+system=wikineural+casenorm+regex mode=typed policy=direct+org+loc N=400
+  doc_leak_rate (any direct identifier survives, strict): 11.0 [8.2, 14.2]%
+  doc_leak_rate incl. partial fragments:                   11.5 [8.5, 14.8]%
+  direct-mention leak rate:                               1.2 [0.8, 1.5]%
+  over-redaction (spurious replacements / 1k tokens):      5.1
+  category     kind    mentions  strict leak [95% CI]      partial [95% CI]        entity-level
+  ADDRESS      direct       780  0.3 [0.0, 0.7]%          0.3 [0.0, 0.7]%        0.3 [0.0, 0.7]%
+  CF           direct       437  0.0 [0.0, 0.0]%          0.0 [0.0, 0.0]%        0.0 [0.0, 0.0]%
+  DATE_BIRTH   direct       227  0.0 [0.0, 0.0]%          0.4 [0.0, 1.4]%        0.0 [0.0, 0.0]%
+EXIT=0

@@ -15,3 +15,7 @@ paper/*.synctex.gz
 paper/*.toc
 paper/*.fls
 paper/*.fdb_latexmk
+results/logs/*install*.log
+results/logs/pip_*.log
+results/logs/ollama_*.log
+results/logs/*.err

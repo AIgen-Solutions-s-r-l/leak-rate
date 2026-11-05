@@ -1,4 +1,0 @@
-C:\Users\rocch\.venvs\leakrate\Lib\site-packages\torch\jit\_script.py:1485: FutureWarning: `torch.jit.script` is not supported in Python 3.14+ and may break. Please switch to `torch.compile` or `torch.export`.
-  warnings.warn(
-torch 2.15.0+cpu gliner 0.2.30
-EXIT=0

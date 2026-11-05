@@ -135,3 +135,25 @@ terminated the pod. Note: the RunPod proxy rejects urllib's default User-Agent w
 The generator exists because real Italian legal / HR / clinical documents cannot be released.
 The annotation schema (`METHODS.md` §2) is deliberately generic: a real, consented corpus annotated
 with the same categories can be dropped into `data/benchmark.jsonl` and the whole pipeline runs unchanged.
+
+## Citation
+
+If you use the benchmark, the metrics or the harness, please cite the working paper:
+
+```bibtex
+@techreport{rocchi2026leakrate,
+  author      = {Alessio Rocchi},
+  title       = {Leak Rate, Not Loss: Measuring What Actually Escapes When a Local Model Pseudonymizes Text for Frontier {LLMs}},
+  institution = {AIgen Solutions},
+  type        = {Working paper},
+  year        = {2026},
+  month       = nov,
+  url         = {https://github.com/AIgen-Solutions-s-r-l/leak-rate}
+}
+```
+
+## License
+
+* Code (`leakrate/`, `scripts/`, `tests/`): MIT, see `LICENSE`.
+* Benchmark, results and paper (`data/`, `results/`, `paper/`): CC BY 4.0, see `LICENSE-DATA`.
+  The benchmark is entirely synthetic and refers to no real person.

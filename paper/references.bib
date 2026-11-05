@@ -1,17 +1,19 @@
-% NOTE: every entry was written from memory of the cited work plus the web checks noted in the
-% repository log. Verify page numbers / DOIs against the publisher before submission.
+% Every entry was checked on 2026-11-06 against the ACL Anthology, arXiv, Crossref, publisher pages,
+% CURIA / EUR-Lex and the EDPB site. Checked fields: authors and order, title, venue, pages, year, DOI.
 
 @article{sweeney2002,
   author  = {Latanya Sweeney},
   title   = {k-Anonymity: A Model for Protecting Privacy},
   journal = {International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems},
-  volume  = {10}, number = {5}, pages = {557--570}, year = {2002}
+  volume  = {10}, number = {5}, pages = {557--570}, year = {2002},
+  doi     = {10.1142/S0218488502001648}
 }
 @article{machanavajjhala2007,
   author  = {Ashwin Machanavajjhala and Daniel Kifer and Johannes Gehrke and Muthuramakrishnan Venkitasubramaniam},
-  title   = {l-Diversity: Privacy Beyond k-Anonymity},
+  title   = {{$\ell$-Diversity}: Privacy Beyond k-Anonymity},
   journal = {ACM Transactions on Knowledge Discovery from Data},
-  volume  = {1}, number = {1}, year = {2007}
+  volume  = {1}, number = {1}, pages = {3}, year = {2007},
+  doi     = {10.1145/1217299.1217302}
 }
 @inproceedings{zaratiana2024gliner,
   author    = {Urchade Zaratiana and Nadi Tomeh and Pierre Holat and Thierry Charnois},
@@ -21,22 +23,25 @@
   doi       = {10.18653/v1/2024.naacl-long.300}
 }
 @misc{presidio,
-  author = {{Microsoft}},
-  title  = {Presidio: Data Protection and De-identification {SDK}},
-  year   = {2024},
-  howpublished = {\url{https://github.com/microsoft/presidio}}
+  author = {{Presidio contributors}},
+  title  = {{Presidio}: an open-source framework for detecting, redacting, masking and anonymizing sensitive data ({PII})},
+  year   = {2026},
+  howpublished = {\url{https://github.com/data-privacy-stack/presidio}},
+  note   = {Originally developed by Microsoft; transferred to the Data Privacy Stack organisation in 2026}
 }
 @article{pilan2022tab,
   author  = {Ildik{\'o} Pil{\'a}n and Pierre Lison and Lilja {\O}vrelid and Anthi Papadopoulou and David S{\'a}nchez and Montserrat Batet},
   title   = {The Text Anonymization Benchmark ({TAB}): A Dedicated Corpus and Evaluation Framework for Text Anonymization},
   journal = {Computational Linguistics},
-  volume  = {48}, number = {4}, pages = {1053--1101}, year = {2022}
+  volume  = {48}, number = {4}, pages = {1053--1101}, year = {2022},
+  doi     = {10.1162/coli_a_00458}
 }
 @inproceedings{lison2021anonymisation,
   author    = {Pierre Lison and Ildik{\'o} Pil{\'a}n and David S{\'a}nchez and Montserrat Batet and Lilja {\O}vrelid},
   title     = {Anonymisation Models for Text Data: State of the art, Challenges and Future Directions},
   booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
-  pages     = {4188--4203}, year = {2021}
+  pages     = {4188--4203}, year = {2021},
+  doi       = {10.18653/v1/2021.acl-long.323}
 }
 @article{mozes2021nointruder,
   author  = {Maximilian Mozes and Bennett Kleinberg},
@@ -46,18 +51,21 @@
 @inproceedings{staab2024beyond,
   author    = {Robin Staab and Mark Vero and Mislav Balunovi{\'c} and Martin Vechev},
   title     = {Beyond Memorization: Violating Privacy via Inference with Large Language Models},
-  booktitle = {International Conference on Learning Representations (ICLR)}, year = {2024}
+  booktitle = {International Conference on Learning Representations (ICLR)}, year = {2024},
+  note      = {arXiv:2310.07298}
 }
-@article{staab2024anonymizers,
-  author  = {Robin Staab and Mark Vero and Mislav Balunovi{\'c} and Martin Vechev},
-  title   = {Large Language Models are Advanced Anonymizers},
-  journal = {arXiv preprint arXiv:2402.13846}, year = {2024}
+@inproceedings{staab2024anonymizers,
+  author    = {Robin Staab and Mark Vero and Mislav Balunovi{\'c} and Martin Vechev},
+  title     = {Language Models are Advanced Anonymizers},
+  booktitle = {International Conference on Learning Representations (ICLR)}, year = {2025},
+  note      = {arXiv:2402.13846}
 }
 @inproceedings{yermilov2023pseudonymization,
   author    = {Oleksandr Yermilov and Vipul Raheja and Artem Chernodub},
-  title     = {Privacy- and Utility-Preserving {NLP} with Anonymized Data: A case study of Pseudonymization},
+  title     = {Privacy- and Utility-Preserving {NLP} with Anonymized data: A case study of Pseudonymization},
   booktitle = {Proceedings of the 3rd Workshop on Trustworthy Natural Language Processing (TrustNLP 2023)},
-  year      = {2023}
+  pages     = {232--241}, year = {2023}, address = {Toronto},
+  doi       = {10.18653/v1/2023.trustnlp-1.20}
 }
 @article{chen2023has,
   author  = {Yu Chen and Tingxin Li and Huiming Liu and Yang Yu},
@@ -67,89 +75,100 @@
 @article{stubbs2015i2b2,
   author  = {Amber Stubbs and {\"O}zlem Uzuner},
   title   = {Annotating longitudinal clinical narratives for de-identification: The 2014 i2b2/{UTHealth} corpus},
-  journal = {Journal of Biomedical Informatics}, volume = {58}, pages = {S20--S29}, year = {2015}
+  journal = {Journal of Biomedical Informatics}, volume = {58}, pages = {S20--S29}, year = {2015},
+  doi     = {10.1016/j.jbi.2015.07.020}
 }
 @inproceedings{johnson2020deid,
   author    = {Alistair E. W. Johnson and Lucas Bulgarelli and Tom J. Pollard},
   title     = {Deidentification of free-text medical records using pre-trained bidirectional transformers},
-  booktitle = {Proceedings of the ACM Conference on Health, Inference, and Learning (CHIL)}, pages = {214--221}, year = {2020}
+  booktitle = {Proceedings of the ACM Conference on Health, Inference, and Learning (CHIL)}, pages = {214--221}, year = {2020},
+  doi       = {10.1145/3368555.3384455}
 }
 @inproceedings{mansfield2022behind,
   author    = {Courtney Mansfield and Amandalynne Paullada and Kristen Howell},
   title     = {Behind the Mask: Demographic bias in name detection for {PII} masking},
   booktitle = {Proceedings of the Second Workshop on Language Technology for Equality, Diversity and Inclusion},
-  year      = {2022}
+  pages     = {76--89}, year = {2022}, address = {Dublin},
+  doi       = {10.18653/v1/2022.ltedi-1.10}
 }
 @inproceedings{papadopoulou2022bootstrapping,
-  author    = {Anthi Papadopoulou and Yunhao Yu and Pierre Lison and Lilja {\O}vrelid},
+  author    = {Anthi Papadopoulou and Pierre Lison and Lilja {\O}vrelid and Ildik{\'o} Pil{\'a}n},
   title     = {Bootstrapping Text Anonymization Models with Distant Supervision},
-  booktitle = {Proceedings of the Thirteenth Language Resources and Evaluation Conference (LREC)}, pages = {4477--4487}, year = {2022}
+  booktitle = {Proceedings of the Thirteenth Language Resources and Evaluation Conference (LREC)}, pages = {4477--4487}, year = {2022}, address = {Marseille}
 }
 @inproceedings{dou2024selfdisclosure,
   author    = {Yao Dou and Isadora Krsek and Tarek Naous and Anubha Kabra and Sauvik Das and Alan Ritter and Wei Xu},
   title     = {Reducing Privacy Risks in Online Self-Disclosures with Language Models},
-  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)}, year = {2024}
+  booktitle = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages     = {13732--13754}, year = {2024}, address = {Bangkok},
+  doi       = {10.18653/v1/2024.acl-long.741}
 }
 @misc{ai4privacy2023,
   author = {{Ai4Privacy}},
-  title  = {pii-masking-200k},
+  title  = {{pii-masking-200k}},
   year   = {2023},
   howpublished = {Hugging Face dataset, \url{https://huggingface.co/datasets/ai4privacy/pii-masking-200k}}
 }
 @misc{edpb2025pseudonymisation,
   author = {{European Data Protection Board}},
-  title  = {Guidelines 01/2025 on Pseudonymisation (version for public consultation)},
+  title  = {{Guidelines 01/2025 on Pseudonymisation, Version 1.0 (adopted for public consultation)}},
   year   = {2025}, month = jan, day = {16},
-  note   = {Public consultation closed 14 March 2025; the final version was not yet published when this draft was written (November 2026)}
+  note   = {Public consultation 17 January to 14 March 2025; no final version had been adopted when this paper was written (November 2026)},
+  howpublished = {\url{https://www.edpb.europa.eu/documents/guideline/guidelines-012025-on-pseudonymisation_en}}
 }
 @misc{wp29anon2014,
   author = {{Article 29 Data Protection Working Party}},
-  title  = {Opinion 05/2014 on Anonymisation Techniques},
-  year   = {2014}, note = {WP216}
+  title  = {{Opinion 05/2014 on Anonymisation Techniques}},
+  year   = {2014}, month = apr, day = {10}, note = {0829/14/EN, WP216}
 }
 @misc{cjeu2025srb,
   author = {{Court of Justice of the European Union}},
-  title  = {Judgment of 4 September 2025, European Data Protection Supervisor v Single Resolution Board, Case C-413/23 P},
-  year   = {2025}, note = {ECLI:EU:C:2025:645; setting aside the General Court's judgment of 26 April 2023 in Case T-557/20}
+  title  = {{Judgment of 4 September 2025 (First Chamber), European Data Protection Supervisor v Single Resolution Board, Case C-413/23 P}},
+  year   = {2025}, note = {ECLI:EU:C:2025:645; setting aside the General Court's judgment of 26 April 2023 in Case T-557/20 (EU:T:2023:219) and referring the case back to the General Court}
 }
 @misc{cjeu2016breyer,
   author = {{Court of Justice of the European Union}},
-  title  = {Judgment of 19 October 2016, Patrick Breyer v Bundesrepublik Deutschland, Case C-582/14},
+  title  = {{Judgment of 19 October 2016 (Second Chamber), Patrick Breyer v Bundesrepublik Deutschland, Case C-582/14}},
   year   = {2016}, note = {ECLI:EU:C:2016:779}
 }
 @misc{gdpr2016,
   author = {{European Parliament and Council}},
-  title  = {Regulation (EU) 2016/679 (General Data Protection Regulation)},
+  title  = {{Regulation (EU) 2016/679 (General Data Protection Regulation)}},
   year   = {2016}, note = {OJ L 119, 4.5.2016}
 }
 @book{elliot2016adf,
   author    = {Mark Elliot and Elaine Mackey and Kieron O'Hara and Caroline Tudor},
   title     = {The Anonymisation Decision-Making Framework},
-  publisher = {UKAN, University of Manchester}, year = {2016}
+  publisher = {UKAN, University of Manchester}, address = {Manchester}, year = {2016},
+  note      = {Second edition (European practitioners' guide) by Elliot, Mackey and O'Hara, UKAN, 2020}
 }
 @book{efron1993bootstrap,
   author    = {Bradley Efron and Robert J. Tibshirani},
   title     = {An Introduction to the Bootstrap},
-  publisher = {Chapman \& Hall}, year = {1993}
+  publisher = {Chapman \& Hall}, address = {New York}, year = {1993},
+  series    = {Monographs on Statistics and Applied Probability}, number = {57}
 }
 @article{field2007clustered,
   author  = {Christopher A. Field and Alan H. Welsh},
   title   = {Bootstrapping clustered data},
-  journal = {Journal of the Royal Statistical Society: Series B}, volume = {69}, number = {3}, pages = {369--390}, year = {2007}
+  journal = {Journal of the Royal Statistical Society: Series B (Statistical Methodology)}, volume = {69}, number = {3}, pages = {369--390}, year = {2007},
+  doi     = {10.1111/j.1467-9868.2007.00593.x}
 }
 @article{wilson1927,
   author  = {Edwin B. Wilson},
   title   = {Probable Inference, the Law of Succession, and Statistical Inference},
-  journal = {Journal of the American Statistical Association}, volume = {22}, number = {158}, pages = {209--212}, year = {1927}
+  journal = {Journal of the American Statistical Association}, volume = {22}, number = {158}, pages = {209--212}, year = {1927},
+  doi     = {10.1080/01621459.1927.10502953}
 }
 @article{hanley1983ruleofthree,
   author  = {James A. Hanley and Abby Lippman-Hand},
   title   = {If Nothing Goes Wrong, Is Everything All Right? Interpreting Zero Numerators},
-  journal = {JAMA}, volume = {249}, number = {13}, pages = {1743--1745}, year = {1983}
+  journal = {JAMA}, volume = {249}, number = {13}, pages = {1743--1745}, year = {1983},
+  doi     = {10.1001/jama.1983.03330370053031}
 }
 @misc{spacy_it,
   author = {{Explosion AI}},
-  title  = {spaCy {Italian} pipeline \texttt{it\_core\_news\_lg}},
+  title  = {{spaCy} {Italian} pipeline \texttt{it\_core\_news\_lg}},
   year   = {2024}, howpublished = {\url{https://spacy.io/models/it}}
 }
 @article{krco2026ratbench,
@@ -157,10 +176,12 @@
   title   = {{RAT-Bench}: A Comprehensive Benchmark for Text Anonymization},
   journal = {arXiv preprint arXiv:2602.12806}, year = {2026}, month = feb
 }
-@article{lermen2026deanonymization,
-  author  = {Simon Lermen and Daniel Paleka and Joshua Swanson and Michael Aerni and Nicholas Carlini and Florian Tram{\`e}r},
-  title   = {Large-scale online deanonymization with {LLMs}},
-  journal = {arXiv preprint arXiv:2602.16800}, year = {2026}, month = feb
+@inproceedings{lermen2026deanonymization,
+  author    = {Simon Lermen and Daniel Paleka and Joshua Swanson and Michael Aerni and Nicholas Carlini and Florian Tram{\`e}r},
+  title     = {Large-scale online deanonymization with {LLMs}},
+  booktitle = {Proceedings of the 35th USENIX Security Symposium (USENIX Security 26)},
+  pages     = {1947--1966}, year = {2026}, address = {Baltimore, MD}, publisher = {USENIX Association},
+  note      = {arXiv:2602.16800}
 }
 @article{xiao2026saysomething,
   author  = {Yunze Xiao and Wenkai Li and Xiaoyuan Wu and Ningshan Ma and Yueqi Song and Weihao Xuan},

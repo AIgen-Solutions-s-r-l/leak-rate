@@ -2,6 +2,8 @@
 
 Measuring what actually escapes when a local model pseudonymizes text for frontier LLMs.
 
+**Working paper (PDF):** [paper/Rocchi_2026_Leak_Rate_Not_Loss_WP.pdf](paper/Rocchi_2026_Leak_Rate_Not_Loss_WP.pdf)
+
 This repository holds the benchmark generator, the pseudonymizer adapters, the metrics
 (leak rate with cluster-bootstrap CIs, k-anonymity on surviving quasi-identifiers, grammatical
 agreement), the downstream-quality harness and the paper draft.

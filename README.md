@@ -2,7 +2,7 @@
 
 Measuring what actually escapes when a local model pseudonymizes text for frontier LLMs.
 
-**Working paper (PDF):** [paper/Rocchi_2026_Leak_Rate_Not_Loss_WP.pdf](paper/Rocchi_2026_Leak_Rate_Not_Loss_WP.pdf)
+**Working paper (PDF):** [paper/Rocchi_2026_Leak_Rate_Not_Loss_WP.pdf](paper/Rocchi_2026_Leak_Rate_Not_Loss_WP.pdf) · **SSRN:** [papers.ssrn.com/abstract=7688838](https://papers.ssrn.com/abstract=7688838)
 
 This repository holds the benchmark generator, the pseudonymizer adapters, the metrics
 (leak rate with cluster-bootstrap CIs, k-anonymity on surviving quasi-identifiers, grammatical
@@ -150,7 +150,8 @@ If you use the benchmark, the metrics or the harness, please cite the working pa
   type        = {Working paper},
   year        = {2026},
   month       = nov,
-  url         = {https://github.com/AIgen-Solutions-s-r-l/leak-rate}
+  url         = {https://github.com/AIgen-Solutions-s-r-l/leak-rate},
+  note        = {SSRN abstract 7688838, \url{https://papers.ssrn.com/abstract=7688838}}
 }
 ```
 
